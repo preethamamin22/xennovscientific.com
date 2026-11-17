@@ -23,7 +23,7 @@ export const ProductDivisions: React.FC<ProductDivisionsProps> = ({ onSelectForQ
   );
 
   return (
-    <section id="products" className="py-16 sm:py-20 bg-xennov-grey border-b border-xennov-grey-border">
+    <section id="divisions" className="py-16 sm:py-20 bg-xennov-grey border-b border-xennov-grey-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
         {/* Section Header - Clean Enterprise Format */}
@@ -31,10 +31,10 @@ export const ProductDivisions: React.FC<ProductDivisionsProps> = ({ onSelectForQ
           <div className="max-w-3xl">
             <div className="xn-label mb-2">Scientific Taxonomy &bull; 12 Divisions</div>
             <h2 className="xn-section-heading mb-3">
-              Explore Our Scientific Product Portfolio
+              12 Scientific Product Divisions
             </h2>
             <p className="xn-section-subheading">
-              Browse structured product divisions covering analytical instrumentation, life science reagents, consumables, chemicals, and laboratory infrastructure.
+              Comprehensive multi-division taxonomy covering molecular biology, analytical instruments, laboratory plasticware, chemicals, safety systems, and modular furniture.
             </p>
           </div>
 

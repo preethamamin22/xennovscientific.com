@@ -123,14 +123,14 @@ export function App() {
           onExploreProducts={() => scrollTo('products')}
         />
 
-        {/* 5. 12 Product Divisions with Taxonomy Tree */}
-        <ProductDivisions
-          onSelectForQuote={handleSelectCategoryForQuote}
-        />
-
-        {/* 6. Featured Priority Catalogue Products */}
+        {/* 5. Scientific Products Catalogue (Prominent Product Section) */}
         <FeaturedProducts
           onSelectProductForQuote={handleSelectProductForQuote}
+        />
+
+        {/* 6. 12 Product Divisions with Taxonomy Tree */}
+        <ProductDivisions
+          onSelectForQuote={handleSelectCategoryForQuote}
         />
 
         {/* 7. 14 Scientific Workflows & Applications */}

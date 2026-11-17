@@ -43,7 +43,7 @@ export const Header: React.FC<HeaderProps> = ({ onSelectCategory, onRequestQuote
 
   const NAV_LINKS = [
     { label: 'Products', id: 'products', hasDropdown: true },
-    { label: 'Featured SKUs', id: 'featured-products' },
+    { label: 'Divisions', id: 'divisions' },
     { label: 'Applications', id: 'applications' },
     { label: 'Brands', id: 'brands' },
     { label: 'Industries', id: 'industries' },

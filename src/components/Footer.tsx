@@ -73,8 +73,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             <ul className="space-y-2 text-xs text-slate-400">
               {[
                 ['Home', 'hero'],
-                ['12 Product Divisions', 'products'],
-                ['Featured Catalogue SKUs', 'featured-products'],
+                ['Scientific Products', 'products'],
+                ['12 Product Divisions', 'divisions'],
                 ['Applications & Workflows', 'applications'],
                 ['Brands & Sourcing', 'brands'],
                 ['Industries We Serve', 'industries'],
