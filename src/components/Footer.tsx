@@ -52,8 +52,8 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-xennov-cyan shrink-0" />
-                <a href="mailto:info@xennovscientific.com" className="hover:text-white transition-colors">
-                  info@xennovscientific.com
+                <a href="mailto:info.xennov@gmail.com" className="hover:text-white transition-colors">
+                  info.xennov@gmail.com
                 </a>
               </div>
               <div className="flex items-center gap-2">

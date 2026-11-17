@@ -39,9 +39,9 @@ export const ContactSection: React.FC = () => {
                   {
                     icon: Mail,
                     label: 'Business Email',
-                    value: 'info@xennovscientific.com',
+                    value: 'info.xennov@gmail.com',
                     sub: 'Commercial Requisitions & Supplier Relations',
-                    href: 'mailto:info@xennovscientific.com'
+                    href: 'mailto:info.xennov@gmail.com'
                   },
                   {
                     icon: Phone,

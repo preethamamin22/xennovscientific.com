@@ -203,7 +203,7 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ initialData }) => {
                   </div>
 
                   <div className="p-3 bg-amber-50 border border-amber-200 text-xs text-amber-800 text-left max-w-md mx-auto mb-6">
-                    <strong>Integration Note:</strong> Form data validated on client. Connect this handler to your backend API or transactional email service (e.g. EmailJS, Resend, or corporate SMTP) to route directly to <code>info@xennovscientific.com</code>.
+                    <strong>Integration Note:</strong> Form data validated on client. Connect this handler to your backend API or transactional email service (e.g. EmailJS, Resend, or corporate SMTP) to route directly to <code>info.xennov@gmail.com</code>.
                   </div>
 
                   <button

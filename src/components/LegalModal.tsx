@@ -30,7 +30,7 @@ export const LegalModal: React.FC<LegalModalProps> = ({ docType, onClose }) => {
         },
         {
           heading: '4. Contact for Privacy Inquiries',
-          body: 'For data access, correction, or removal requests, please write to our compliance desk at info@xennovscientific.com with the subject line "Data Privacy Request".'
+          body: 'For data access, correction, or removal requests, please write to our compliance desk at info.xennov@gmail.com with the subject line "Data Privacy Request".'
         }
       ]
     },
