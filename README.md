@@ -1,10 +1,11 @@
-# XenNov Scientific – B2B Scientific Procurement Platform
+# XenNov Scientific – Corporate Landing Page & B2B Procurement Platform
 
 A scalable, product-led B2B scientific products, laboratory equipment, and institutional procurement web platform for **XenNov Scientific Private Limited** (Bengaluru, Karnataka, India).
 
-Built in accordance with the official **Website Design & Content Brief** and referencing the corporate hierarchy and visual standards of **Thermo Fisher Scientific**.
+Built in accordance with the official **Website Design & Content Brief** and referencing the clean, high-density corporate hierarchy and visual standards of **Thermo Fisher Scientific** ([Reference Guide Page](https://www.thermofisher.com/in/en/home/global/forms/industrial/pharma-development-analytics-guide.html)).
 
-Live preview running at: **http://localhost:3000/**
+- **Repository:** [https://github.com/preethamamin22/xennovscientific.com](https://github.com/preethamamin22/xennovscientific.com)
+- **Live Local Preview:** `http://localhost:3000/`
 
 ---
 
@@ -21,8 +22,8 @@ Live preview running at: **http://localhost:3000/**
   - **Background Grey:** `#F3F6F9`
   - **Dark Text:** `#172B3A`
   - **White:** `#FFFFFF`
-  - **Strict No-AI-Star Policy:** Authentic scientific iconography (`FlaskConical`, `Microscope`, `Dna`, `Activity`, `TestTubes`, `Layers`, `ShieldCheck`) with zero decorative sparkle/star emojis.
-  - **Thermo Fisher Reference Patterns:** Utility top strip, clean horizontal navigation, breadcrumb eyebrows, sharp-cornered rectangular content panels, crisp data tables, and structured RFQ conversion funnels.
+  - **Strict Clean UI Policy:** Pure data-driven, schematic layouts without stock photo clutter or decorative sparkle/star emojis.
+  - **Thermo Fisher Reference Patterns:** Utility top strip, 2-column Hero with side-by-side RFQ Quotation form, breadcrumb eyebrows, sharp-cornered content panels, crisp data tables, and structured RFQ conversion funnels.
 
 ---
 
@@ -32,20 +33,18 @@ Live preview running at: **http://localhost:3000/**
    - Location, email, and quick-link utility bar.
    - Text & SVG Erlenmeyer flask logo mark.
    - 12-Division Mega Menu with subcategory preview.
-   - Global Search button (`Ctrl+K` shortcut).
-   - High-contrast **"Request a Quote"** primary CTA.
+   - Global Search modal (`Ctrl+K` shortcut).
+   - High-contrast **"Request a Quote"** primary CTA and responsive mobile drawer.
 
-2. **Enterprise Hero Banner with Quick Search (`Hero.tsx`):**
-   - High-precision laboratory photograph with layered navy gradient overlays.
-   - Exact copy from brief: *"Advancing Science. Enabling Discovery."*
-   - Interactive search input for immediate product, brand, or SKU lookups.
-   - 3 Subtle highlights: *Comprehensive Scientific Portfolio*, *Research & Laboratory Solutions*, *Institutional Procurement Support*.
+2. **Executive 2-Column Hero & RFQ Form (`Hero.tsx`):**
+   - Direct Thermo Fisher Guide formula: Left column delivers authority breadcrumbs, primary headline, strategic positioning, and **Key Procurement Capabilities** bulleted box.
+   - Right column provides an immediate B2B Quotation Form card with instant division selection and WhatsApp fast-track.
 
 3. **Operational KPI Trust Bar (`TrustBar.tsx`):**
-   - 12 Scientific Divisions, 9+ Industry Sectors, 6 Service Solutions, and Bengaluru Gateway.
+   - 12 Scientific Divisions, 9+ Industry Sectors, 6 Service Solutions, and Bengaluru Gateway with responsive 2-column (mobile) to 4-column (desktop) alignment.
 
-4. **About XenNov Scientific (`About.tsx`):**
-   - Official company statement, vision, mission, core proposition (*"One Partner. Multiple Scientific Solutions."*), and Bengaluru hub showcase.
+4. **Corporate Credentials & Operations (`About.tsx`):**
+   - Executive corporate infrastructure card highlighting Batch CoA traceability, active Cold-Chain protocols (-80°C to +4°C), institutional GeM/rate contracting, and Bengaluru hub dispatch.
 
 5. **12 Product Divisions with Full Taxonomy (`ProductDivisions.tsx` & `ProductCategoryModal.tsx`):**
    - Complete subcategory taxonomy directly from Section 4 of the brief:
@@ -64,74 +63,60 @@ Live preview running at: **http://localhost:3000/**
    - Division detail modal with subcategories, key highlights, and prefilled RFQ trigger.
 
 6. **Priority Launch Catalogue (`FeaturedProducts.tsx` & `ProductDetailModal.tsx`):**
-   - Verified priority catalogue items:
-     - 2 mL Screw-Cap Microcentrifuge Tube, Clear (Cat #XN-SCT-200C)
-     - 5 mL Screw-Cap Conical Tube (Cat #XN-SCT-500C)
-     - Precision Laboratory Refrigerator, 2–8°C ~549 L (Cat #XN-REF-549L)
-     - Low-Temperature Laboratory Freezer, -20°C ~700 L (Cat #XN-FRZ-700L)
-     - Variable Volume Single-Channel Micropipette (Cat #XN-PIP-PRO)
-     - High-Performance C18 HPLC Analytical Column (Cat #XN-COL-C18)
-     - 2X High-Fidelity Taq PCR Master Mix (Cat #XN-PCR-2XMM)
-     - Class II Type A2 Biological Safety Cabinet (Cat #XN-BSC-IIA2)
-   - Status badges: *Available on Enquiry*, *Quote Required*, *In Stock*.
-   - Technical specifications table, pack variants, and direct quote prefill.
+   - 24 verified scientific catalogue items with SKU codes, specifications tables, pack configurations, and direct RFQ prefill.
+   - Clean Technical Blueprint & Verification Panel with official SKU drawing icons and quality stamps (*✓ Lot CoA Available*, *✓ Manufacturer Verified*, *✓ ISO 9001 Sourcing*).
 
 7. **Scientific Workflows & Applications (`ApplicationsSection.tsx`):**
    - 14 workflows from Section 6 of the brief: DNA/RNA extraction, PCR/qPCR, Genomics & NGS, Protein analysis, Cell culture, Microbiology, Chromatography, Pharma QC, Chemical analysis, Environmental testing, Food safety, Bioprocessing, Sample storage, and Cold-chain.
 
-8. **Industries We Serve (`Industries.tsx`):**
-   - 9 sectors: Academic & Research, Biotechnology, Pharmaceutical, Hospitals, Clinical Diagnostics, Food & Beverage, Agriculture & Veterinary, Environmental & Water, Industrial & Manufacturing.
+8. **Global Brands Directory & Channel Program (`BrandsSection.tsx`):**
+   - Directory across instruments, reagents, chromatography, and consumables.
+   - *"Become a Brand Partner"* manufacturer channel proposal box.
 
-9. **Why Choose XenNov (`WhyChooseUs.tsx`):**
-   - 6 benefit blocks: Comprehensive Portfolio, Reliable Sourcing Network, Customer-Focused Procurement, Competitive Quotations, Institutional & Bulk Support, Long-Term Partnerships.
+9. **Sectors & Applications (`Industries.tsx`):**
+   - 9 structured scientific sector cards with custom discipline icons and bulleted procurement scopes.
 
-10. **Solutions & Services (`Solutions.tsx`):**
-    - Alternating layout detailing the 6 operational capabilities: Product Sourcing, Institutional & Bulk, Equipment Solutions, Lab Setup & Infrastructure, Custom Sourcing, Manufacturer Partnerships.
+10. **Operational Capabilities (`Solutions.tsx`):**
+    - High-density 3-column enterprise grid for Product Sourcing, Institutional & Bulk Procurement, Lab Equipment, Lab Setup, Custom Sourcing, and Vendor Consolidation.
 
-11. **Brands & Manufacturer Partnerships (`BrandsSection.tsx`):**
-    - Global brand directory (Thermo Fisher, Merck, Agilent, Waters, Eppendorf, Tarsons, Abdos, Haier Biomedical) with clear compliant framing as sourcing networks.
-    - **"Become a Brand Partner"** manufacturer expansion program.
+11. **Technical Resources Knowledge Centre (`ResourcesSection.tsx`):**
+    - Catalogues, selection guides, application notes, and datasheets with simulated modal preview and dossier requests.
 
-12. **Technical Resources & Knowledge Centre (`ResourcesSection.tsx`):**
-    - Catalogues, selection guides (cold storage, HPLC column selection, PCR optimization), and technical datasheets with downloadable preview modal.
+12. **B2B Quotation Desk with Multi-File Upload (`QuoteSection.tsx`):**
+    - Specification upload (PDF, XLSX, DOCX up to 15 MB).
+    - Pre-filling integration from featured products, divisions, brands, and workflows.
+    - Direct WhatsApp desk integration.
 
-13. **Comprehensive B2B RFQ Workflow (`QuoteSection.tsx`):**
-    - All fields from Section 10: Full Name, Organisation, Designation, Email, Phone, City/State, Category, Product Name, Brand Preference, Catalogue Number, Required Specifications, Quantity, File Upload (PDF, XLSX, DOCX, Images up to 15 MB), and Additional Requirements.
-    - Instant pre-fill when navigating from any product or division.
-    - WhatsApp Procurement Desk quick-connect.
+13. **Corporate Office & Interactive Map (`ContactSection.tsx`):**
+    - Bengaluru headquarters details, business placeholders, and interactive Google Map embed.
 
-14. **Corporate Contact & Interactive Map (`ContactSection.tsx`):**
-    - Bengaluru headquarters details, official placeholders, and live Google Maps embed.
-
-15. **Enterprise Footer (`Footer.tsx`):**
-    - Logo, tagline, company summary, quick navigation, 12 divisions, key industries, legal placeholders (*Privacy Policy, Terms & Conditions, Disclaimer, Shipping & Returns*), and copyright notice.
-
-16. **Global Search Modal (`GlobalSearchModal.tsx`):**
-    - Fast indexed search supporting product names, SKUs, brands, categories, and applications. Triggered via header or `Ctrl+K`.
+14. **Enterprise Footer & Regulatory Modals (`Footer.tsx` & `LegalModal.tsx`):**
+    - Complete sitemap and formal compliance dialogs for Privacy Policy (India DPDP Act 2023), Terms & Conditions, Regulatory & Sourcing Disclaimers, and Shipping & Returns Policy.
 
 ---
 
-## 🛠️ Technology Stack
+## 🛠️ Technology Stack & Build Tools
 
-- **React 18** with **TypeScript 5**
-- **Vite 5** (production build size: ~320 kB JS, ~41 kB CSS)
-- **Tailwind CSS 3** (corporate palette, custom enterprise components)
-- **Lucide Icons** (strictly scientific and enterprise line icons)
+- **Framework:** React 18 with TypeScript 5
+- **Build Tool:** Vite 5 (instant HMR & tree-shaken production bundles)
+- **Styling:** Tailwind CSS 3 with custom XenNov enterprise design tokens
+- **Iconography:** Lucide React (authentic scientific and operational symbols)
+- **Forms & State:** Controlled state with instant validation, deep-link prefilling, and client-side sanitization
 
 ---
 
-## 💻 Commands
+## 🚀 Running the Project
 
 ```bash
-# Install dependencies
+# 1. Install dependencies
 npm install
 
-# Run development server
+# 2. Start development server
 npm run dev
 
-# Compile TypeScript and build production bundle
+# 3. Create production build
 npm run build
 
-# Preview production build locally
-npm run preview
+# 4. Preview production build
+npm run preview -- --port 3000 --host
 ```
