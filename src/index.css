@@ -1,0 +1,78 @@
+/* XenNov Scientific – Elevated Enterprise CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    overflow-x: hidden;
+    width: 100%;
+  }
+  body {
+    @apply text-xennov-text bg-white;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply tracking-tight;
+  }
+
+  /* Scroll margin for anchor links */
+  [id] {
+    scroll-margin-top: 72px;
+  }
+}
+
+@layer components {
+  .xn-btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-sm text-xs sm:text-sm font-semibold text-white bg-xennov-blue hover:bg-xennov-blue-dark active:bg-xennov-blue-dark transition-all duration-200 shadow-sm;
+  }
+  .xn-btn-navy {
+    @apply inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-sm text-xs sm:text-sm font-semibold text-white bg-xennov-navy hover:bg-xennov-navy-light transition-all duration-200;
+  }
+  .xn-btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-sm text-xs sm:text-sm font-semibold text-white border border-white/50 hover:border-white hover:bg-white/10 transition-all duration-200;
+  }
+  .xn-label {
+    @apply text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-xennov-blue;
+  }
+  .xn-section-heading {
+    @apply text-2xl sm:text-3xl lg:text-4xl font-extrabold text-xennov-navy leading-tight;
+  }
+  .xn-section-subheading {
+    @apply text-xs sm:text-sm lg:text-base text-xennov-text-muted leading-relaxed font-normal;
+  }
+  .xn-card {
+    @apply bg-white border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300;
+  }
+
+  /* Thermo Fisher-style horizontal rule */
+  .xn-rule {
+    @apply w-10 sm:w-12 h-1 bg-xennov-cyan rounded-full;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 7px; height: 7px; }
+::-webkit-scrollbar-track { background: #F3F6F9; }
+::-webkit-scrollbar-thumb { background: #A8BFCC; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #1677B8; }
+
+/* Smooth image rendering */
+img { image-rendering: -webkit-optimize-contrast; max-width: 100%; }
+
+/* Utility strip (top bar) */
+.xn-topstrip { @apply bg-xennov-navy-dark text-slate-300 text-xs py-2; }
+
+/* Focus ring */
+*:focus-visible {
+  outline: 2px solid #38B6D9;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
