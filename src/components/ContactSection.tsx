@@ -40,13 +40,15 @@ export const ContactSection: React.FC = () => {
                     icon: Mail,
                     label: 'Business Email',
                     value: 'info@xennovscientific.com',
-                    sub: '[Official Business Email Placeholder]',
+                    sub: 'Commercial Requisitions & Supplier Relations',
+                    href: 'mailto:info@xennovscientific.com'
                   },
                   {
                     icon: Phone,
                     label: 'Contact Desk',
-                    value: '+91 (080) [OFFICIAL_PHONE_PLACEHOLDER]',
-                    sub: '[Official Contact Desk Number Placeholder]',
+                    value: '+91 82175 24813',
+                    sub: 'Direct Telephone & WhatsApp Support',
+                    href: 'tel:+918217524813'
                   },
                   {
                     icon: Clock,
@@ -54,14 +56,20 @@ export const ContactSection: React.FC = () => {
                     value: 'Mon – Sat: 9:00 AM – 6:30 PM IST',
                     sub: 'Sundays & National Holidays: Closed',
                   },
-                ].map(({ icon: Icon, label, value, sub }) => (
+                ].map(({ icon: Icon, label, value, sub, href }) => (
                   <div key={label} className="flex items-start gap-3">
                     <div className="w-8 h-8 sm:w-9 sm:h-9 bg-xennov-grey border border-xennov-grey-border flex items-center justify-center text-xennov-blue shrink-0">
                       <Icon className="w-4 h-4" />
                     </div>
                     <div className="min-w-0">
                       <div className="text-[9px] sm:text-[10px] font-black uppercase tracking-wider text-xennov-navy">{label}</div>
-                      <div className="text-xs sm:text-sm font-semibold text-xennov-text mt-0.5 break-words">{value}</div>
+                      {href ? (
+                        <a href={href} className="text-xs sm:text-sm font-semibold text-xennov-blue hover:text-xennov-navy hover:underline mt-0.5 block break-words">
+                          {value}
+                        </a>
+                      ) : (
+                        <div className="text-xs sm:text-sm font-semibold text-xennov-text mt-0.5 break-words">{value}</div>
+                      )}
                       <div className="text-[10px] sm:text-xs text-slate-400 italic break-words">{sub}</div>
                     </div>
                   </div>

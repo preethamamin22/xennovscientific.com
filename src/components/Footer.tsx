@@ -52,11 +52,15 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-xennov-cyan shrink-0" />
-                <span>info@xennovscientific.com <span className="text-slate-500">[placeholder]</span></span>
+                <a href="mailto:info@xennovscientific.com" className="hover:text-white transition-colors">
+                  info@xennovscientific.com
+                </a>
               </div>
               <div className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-xennov-cyan shrink-0" />
-                <span>+91 (080) [CONTACT_NUMBER_PLACEHOLDER]</span>
+                <a href="tel:+918217524813" className="hover:text-white transition-colors">
+                  +91 82175 24813
+                </a>
               </div>
             </div>
           </div>

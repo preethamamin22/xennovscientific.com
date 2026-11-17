@@ -109,7 +109,7 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ initialData }) => {
     const text = encodeURIComponent(
       `Hello XenNov Scientific, I would like to request a quotation for: ${form.productName || form.category || 'Laboratory Supplies'} (Organisation: ${form.organisation || 'N/A'}).`
     );
-    window.open(`https://wa.me/91XXXXXXXXXX?text=${text}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/918217524813?text=${text}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -163,7 +163,7 @@ export const QuoteSection: React.FC<QuoteSectionProps> = ({ initialData }) => {
                 </div>
               </div>
               <p className="text-xs text-slate-600 mb-3.5 leading-relaxed">
-                Connect directly with our desk for urgent stock inquiries. (Configurable official contact: <code className="bg-emerald-100 text-emerald-900 px-1 py-0.5 text-[11px]">+91 [PHONE_PLACEHOLDER]</code>).
+                Connect directly with our desk for urgent stock inquiries, price estimates, and technical guidance at <a href="tel:+918217524813" className="font-bold text-emerald-800 hover:underline">+91 82175 24813</a>.
               </p>
               <button
                 type="button"

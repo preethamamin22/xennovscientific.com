@@ -67,8 +67,12 @@ export const Header: React.FC<HeaderProps> = ({ onSelectCategory, onRequestQuote
             <span className="flex items-center gap-1.5">
               <Mail className="w-3 h-3 text-xennov-cyan shrink-0" />
               info@xennovscientific.com
-              <span className="text-slate-500 text-[10px] ml-1">[placeholder]</span>
             </span>
+            <span className="text-slate-600">|</span>
+            <a href="tel:+918217524813" className="flex items-center gap-1.5 hover:text-white transition-colors">
+              <Phone className="w-3 h-3 text-xennov-cyan shrink-0" />
+              +91 82175 24813
+            </a>
           </div>
           <div className="flex items-center gap-6 text-slate-400">
             <button onClick={() => scrollTo('quote')} className="hover:text-white transition-colors">Request a Quote</button>

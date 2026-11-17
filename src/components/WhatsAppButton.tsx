@@ -3,8 +3,7 @@ import { MessageSquare } from 'lucide-react';
 
 export const WhatsAppButton: React.FC = () => {
   const handleClick = () => {
-    // Configurable – set official WhatsApp business number below:
-    const PHONE = '91XXXXXXXXXX'; // e.g. '919845000000'
+    const PHONE = '918217524813';
     const msg = encodeURIComponent('Hello XenNov Scientific! I visited your website and would like to enquire about laboratory products and solutions.');
     window.open(`https://wa.me/${PHONE}?text=${msg}`, '_blank', 'noopener,noreferrer');
   };

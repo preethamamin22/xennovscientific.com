@@ -63,7 +63,7 @@ export const Hero: React.FC<HeroProps> = ({
     const text = encodeURIComponent(
       `Hello XenNov Scientific, I would like to inquire about laboratory procurement solutions for ${formData.organisation || 'my organization'}.`
     );
-    window.open(`https://wa.me/91XXXXXXXXXX?text=${text}`, '_blank', 'noopener,noreferrer');
+    window.open(`https://wa.me/918217524813?text=${text}`, '_blank', 'noopener,noreferrer');
   };
 
   return (
