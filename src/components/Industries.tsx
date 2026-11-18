@@ -34,12 +34,12 @@ export const Industries: React.FC<IndustriesProps> = ({ onSelectIndustry }) => {
             return (
               <div
                 key={ind.id}
-                className="group bg-white border border-slate-200 hover:border-xennov-blue shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between border-t-2 border-t-xennov-navy hover:border-t-xennov-cyan p-5 sm:p-6"
+                className="group bg-white border border-xennov-grey-border hover:border-xennov-blue shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between border-t-2 border-t-xennov-navy hover:border-t-xennov-cyan p-5 sm:p-6"
               >
                 <div>
                   {/* Top Bar: Icon + Index */}
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 bg-slate-50 border border-slate-200 group-hover:border-xennov-cyan group-hover:bg-xennov-cyan/10 text-xennov-navy group-hover:text-xennov-blue flex items-center justify-center transition-colors">
+                    <div className="w-10 h-10 bg-xennov-grey border border-xennov-grey-border group-hover:border-xennov-cyan group-hover:bg-xennov-cyan/10 text-xennov-navy group-hover:text-xennov-blue flex items-center justify-center transition-colors">
                       <IconComp className="w-5 h-5" />
                     </div>
                     <span className="font-mono text-[10px] font-bold tracking-widest text-slate-400 uppercase">
@@ -56,7 +56,7 @@ export const Industries: React.FC<IndustriesProps> = ({ onSelectIndustry }) => {
                   </p>
 
                   {/* Focus Procurement Areas */}
-                  <div className="pt-3 border-t border-slate-100">
+                  <div className="pt-3 border-t border-xennov-grey-border/60">
                     <div className="text-[10px] font-mono font-bold uppercase tracking-wider text-xennov-blue mb-2.5">
                       Procurement Scope
                     </div>

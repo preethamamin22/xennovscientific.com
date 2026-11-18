@@ -85,7 +85,7 @@ export const ContactSection: React.FC = () => {
           </div>
 
           {/* Interactive Google Map Embed Card */}
-          <div className="lg:col-span-3 flex flex-col min-h-[320px] sm:min-h-[420px] border border-xennov-grey-border shadow-sm overflow-hidden bg-slate-100 relative">
+          <div className="lg:col-span-3 flex flex-col min-h-[320px] sm:min-h-[420px] border border-xennov-grey-border shadow-sm overflow-hidden bg-xennov-grey relative">
             <div className="relative flex-1 w-full h-full min-h-[280px]">
               <iframe
                 title="XenNov Scientific – Kamakshipalya, Bangalore Location"
@@ -100,7 +100,7 @@ export const ContactSection: React.FC = () => {
               />
 
               {/* Overlay badge */}
-              <div className="absolute top-3 left-3 bg-white/95 border border-slate-200 shadow-sm px-2.5 py-1.5 sm:px-3 sm:py-2">
+              <div className="absolute top-3 left-3 bg-white/95 border border-xennov-grey-border shadow-sm px-2.5 py-1.5 sm:px-3 sm:py-2">
                 <div className="flex items-center gap-1.5 mb-0.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
                   <span className="text-[10px] sm:text-[11px] font-bold text-xennov-navy">Kamakshipalya Facility</span>

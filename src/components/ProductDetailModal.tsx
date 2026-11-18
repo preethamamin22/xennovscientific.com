@@ -57,7 +57,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
       onClick={onClose}
     >
       <div
-        className="relative bg-white w-full max-w-3xl border border-slate-300 shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col"
+        className="relative bg-white w-full max-w-3xl border border-xennov-grey-border shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header Bar */}
@@ -83,8 +83,8 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
           <div className="grid grid-cols-1 md:grid-cols-12 gap-6 items-start">
             
             {/* Left Column: Clean Technical Specification Blueprint Box */}
-            <div className="md:col-span-5 relative border border-slate-300 bg-slate-50 flex flex-col justify-between overflow-hidden">
-              <div className="p-6 flex flex-col items-center justify-center min-h-[190px] bg-gradient-to-b from-slate-100 to-slate-50 relative">
+            <div className="md:col-span-5 relative border border-xennov-grey-border bg-xennov-grey flex flex-col justify-between overflow-hidden">
+              <div className="p-6 flex flex-col items-center justify-center min-h-[190px] bg-xennov-grey relative">
                 {/* Subtle Technical Blueprint Grid */}
                 <div 
                   className="absolute inset-0 opacity-15 pointer-events-none"
@@ -94,12 +94,12 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                   }}
                 />
 
-                <div className="relative z-10 w-24 h-24 rounded-none border border-slate-300 bg-white shadow-sm flex items-center justify-center text-xennov-navy p-4">
+                <div className="relative z-10 w-24 h-24 rounded-none border border-xennov-grey-border bg-white shadow-sm flex items-center justify-center text-xennov-navy p-4">
                   <SchematicIcon className="w-12 h-12 text-xennov-blue stroke-[1.5]" />
                 </div>
 
                 <div className="relative z-10 mt-3 text-center">
-                  <span className="font-mono text-[11px] font-bold text-xennov-navy uppercase tracking-wider bg-white px-2 py-0.5 border border-slate-300">
+                  <span className="font-mono text-[11px] font-bold text-xennov-navy uppercase tracking-wider bg-white px-2 py-0.5 border border-xennov-grey-border">
                     {product.catalogNumber}
                   </span>
                   <div className="text-[10px] text-slate-500 mt-1 font-mono">
@@ -109,7 +109,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
               </div>
 
               {/* Quality & Batch Standards Strip */}
-              <div className="p-3 bg-white border-t border-slate-200 space-y-1.5">
+              <div className="p-3 bg-white border-t border-xennov-grey-border space-y-1.5">
                 <div className="text-[9px] font-mono font-bold uppercase tracking-wider text-slate-400">
                   Quality &amp; Sourcing Standards
                 </div>
@@ -117,7 +117,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                   <span className="text-[10px] font-semibold text-emerald-800 bg-emerald-50 border border-emerald-200 px-1.5 py-0.5">
                     ✓ Lot CoA Available
                   </span>
-                  <span className="text-[10px] font-semibold text-slate-700 bg-slate-100 border border-slate-200 px-1.5 py-0.5">
+                  <span className="text-[10px] font-semibold text-slate-700 bg-xennov-grey border border-xennov-grey-border px-1.5 py-0.5">
                     ✓ Original Manufacturer
                   </span>
                   <span className="text-[10px] font-semibold text-blue-800 bg-blue-50 border border-blue-200 px-1.5 py-0.5">

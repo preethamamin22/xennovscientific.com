@@ -123,7 +123,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
         </div>
 
         {/* Sub-Filter Controls Bar: Availability Filter + View Mode Toggle + Counter */}
-        <div className="flex flex-wrap items-center justify-between gap-3 mb-6 bg-slate-50 p-3 border border-slate-200 text-xs">
+        <div className="flex flex-wrap items-center justify-between gap-3 mb-6 bg-xennov-grey p-3 border border-xennov-grey-border text-xs">
           
           {/* Availability Pills */}
           <div className="flex items-center gap-1.5 overflow-x-auto">
@@ -137,7 +137,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                 className={`px-2.5 py-1 text-[11px] font-medium border transition-colors whitespace-nowrap ${
                   availabilityFilter === opt.id
                     ? 'bg-xennov-blue text-white border-xennov-blue'
-                    : 'bg-white text-slate-600 border-slate-200 hover:border-slate-300'
+                    : 'bg-white text-slate-600 border-xennov-grey-border hover:border-slate-300'
                 }`}
               >
                 {opt.label}
@@ -152,10 +152,10 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
             </span>
 
             {/* View Mode Toggle */}
-            <div className="flex items-center border border-slate-300 bg-white">
+            <div className="flex items-center border border-xennov-grey-border bg-white">
               <button
                 onClick={() => setViewMode('grid')}
-                className={`p-1.5 ${viewMode === 'grid' ? 'bg-slate-200 text-xennov-navy font-bold' : 'text-slate-400 hover:text-slate-700'}`}
+                className={`p-1.5 ${viewMode === 'grid' ? 'bg-xennov-grey text-xennov-navy font-bold' : 'text-slate-400 hover:text-slate-700'}`}
                 title="Grid View"
                 aria-label="Grid View"
               >
@@ -163,7 +163,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
               </button>
               <button
                 onClick={() => setViewMode('table')}
-                className={`p-1.5 ${viewMode === 'table' ? 'bg-slate-200 text-xennov-navy font-bold' : 'text-slate-400 hover:text-slate-700'}`}
+                className={`p-1.5 ${viewMode === 'table' ? 'bg-xennov-grey text-xennov-navy font-bold' : 'text-slate-400 hover:text-slate-700'}`}
                 title="Table View"
                 aria-label="Table View"
               >
@@ -179,12 +179,12 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
             {filtered.map(product => (
               <div
                 key={product.id}
-                className="bg-white border border-slate-200 hover:border-xennov-blue shadow-sm hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between"
+                className="bg-white border border-xennov-grey-border hover:border-xennov-blue shadow-sm hover:shadow-md transition-all duration-200 p-5 flex flex-col justify-between"
               >
                 <div className="space-y-3">
                   {/* SKU and Status Line */}
-                  <div className="flex items-center justify-between gap-2 border-b border-slate-100 pb-2.5">
-                    <span className="font-mono text-[11px] font-bold text-xennov-navy bg-slate-50 px-2 py-0.5 border border-slate-200">
+                  <div className="flex items-center justify-between gap-2 border-b border-xennov-grey-border/60 pb-2.5">
+                    <span className="font-mono text-[11px] font-bold text-xennov-navy bg-xennov-grey px-2 py-0.5 border border-xennov-grey-border">
                       {product.catalogNumber}
                     </span>
                     {getStatusBadge(product.availability)}
@@ -209,7 +209,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                   </p>
 
                   {/* Key Specs Preview (Clean Data List) */}
-                  <div className="bg-slate-50 p-2.5 border border-slate-200/80 text-[11px] space-y-1">
+                  <div className="bg-xennov-grey p-2.5 border border-xennov-grey-border text-[11px] space-y-1">
                     {Object.entries(product.specifications).slice(0, 2).map(([k, v]) => (
                       <div key={k} className="flex items-center justify-between text-slate-600">
                         <span className="font-semibold text-xennov-navy truncate mr-2">{k}:</span>
@@ -230,7 +230,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                 </div>
 
                 {/* Action Buttons */}
-                <div className="pt-3.5 mt-3.5 border-t border-slate-100 flex items-center justify-between gap-2">
+                <div className="pt-3.5 mt-3.5 border-t border-xennov-grey-border/60 flex items-center justify-between gap-2">
                   <button
                     onClick={() => setSelectedProduct(product)}
                     className="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 hover:text-xennov-navy transition-colors"
@@ -253,7 +253,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
 
         {/* ── View 2: High-Density Table / List View (Thermo Fisher Catalogue Table Style) ── */}
         {viewMode === 'table' && (
-          <div className="border border-slate-200 overflow-x-auto mb-10 shadow-sm">
+          <div className="border border-xennov-grey-border overflow-x-auto mb-10 shadow-sm">
             <table className="w-full text-left text-xs border-collapse">
               <thead>
                 <tr className="bg-xennov-navy text-white font-mono text-[11px] border-b border-slate-800">
@@ -265,17 +265,17 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                   <th className="p-3 text-right font-bold whitespace-nowrap">Action</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-slate-200">
+              <tbody className="divide-y divide-xennov-grey-border">
                 {filtered.map((product, idx) => {
                   const firstSpecKey = Object.keys(product.specifications)[0];
                   const firstSpecVal = firstSpecKey ? product.specifications[firstSpecKey] : 'Standard';
                   return (
                     <tr 
                       key={product.id}
-                      className={`hover:bg-slate-50 transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-slate-50/50'}`}
+                      className={`hover:bg-xennov-grey transition-colors ${idx % 2 === 0 ? 'bg-white' : 'bg-xennov-grey/50'}`}
                     >
                       <td className="p-3 font-mono font-bold text-xennov-navy whitespace-nowrap">
-                        <span className="bg-slate-100 px-2 py-0.5 border border-slate-200">
+                        <span className="bg-xennov-grey px-2 py-0.5 border border-xennov-grey-border">
                           {product.catalogNumber}
                         </span>
                       </td>
@@ -302,7 +302,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
                       <td className="p-3 text-right whitespace-nowrap space-x-2">
                         <button
                           onClick={() => setSelectedProduct(product)}
-                          className="px-2.5 py-1 text-[11px] font-semibold text-slate-600 border border-slate-200 hover:bg-slate-100 transition-colors"
+                          className="px-2.5 py-1 text-[11px] font-semibold text-slate-600 border border-xennov-grey-border hover:bg-xennov-grey transition-colors"
                         >
                           Specs
                         </button>
@@ -323,7 +323,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
 
         {/* Empty State */}
         {filtered.length === 0 && (
-          <div className="p-12 text-center border border-dashed border-slate-300 bg-slate-50 mb-10">
+          <div className="p-12 text-center border border-dashed border-xennov-grey-border bg-xennov-grey mb-10">
             <Package className="w-10 h-10 text-slate-400 mx-auto mb-3" />
             <h3 className="text-sm font-bold text-xennov-navy mb-1">No products match your filter criteria</h3>
             <p className="text-xs text-slate-500 mb-4">Try clearing your search query or choosing another division.</p>
@@ -341,7 +341,7 @@ export const FeaturedProducts: React.FC<FeaturedProductsProps> = ({
         )}
 
         {/* Bottom Procurement Help Banner */}
-        <div className="bg-slate-50 border border-slate-200 p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <div className="bg-xennov-grey border border-xennov-grey-border p-5 sm:p-6 flex flex-col sm:flex-row items-center justify-between gap-4">
           <div>
             <div className="text-xs font-bold text-xennov-navy">
               Looking for non-catalog items, custom chemical grades, or specialized chromatography phases?

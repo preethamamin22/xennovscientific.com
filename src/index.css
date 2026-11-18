@@ -4,11 +4,14 @@
 @tailwind utilities;
 
 :root {
-  /* Centralized Background & Surface Theme Tokens (Easily Customizable) */
-  --xennov-bg-main: #FFFFFF;
-  --xennov-bg-subtle: #F8FAFC;
-  --xennov-bg-subtle-alt: #F1F5F9;
-  --xennov-bg-border: #E2E8F0;
+  /* Centralized Background & Surface Theme Tokens (Exact Thermo Fisher Scientific Reference Palette) */
+  --xennov-bg-main: #FFFFFF;           /* Thermo Fisher --background-primary: #ffffff */
+  --xennov-bg-subtle: #F7F7F7;         /* Thermo Fisher --background-secondary / --gray-0: #f7f7f7 */
+  --xennov-bg-subtle-alt: #F1F9FF;     /* Thermo Fisher --blue-0: #f1f9ff */
+  --xennov-bg-border: #E5E5E5;         /* Thermo Fisher --border-subtle-01 / --gray-05: #e5e5e5 */
+  --xennov-border-subtle: #CCCCCC;     /* Thermo Fisher --border-subtle-02 / --gray-10: #cccccc */
+  --xennov-text-primary: #1B1B1D;      /* Thermo Fisher --text-primary / --gray-100: #1b1b1d */
+  --xennov-text-secondary: #54545C;    /* Thermo Fisher --text-secondary / --gray-60: #54545c */
 }
 
 @layer base {

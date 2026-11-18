@@ -22,7 +22,7 @@ export const ProductCategoryModal: React.FC<ProductCategoryModalProps> = ({
       onClick={onClose}
     >
       <div
-        className="relative bg-white w-full max-w-2xl border border-slate-300 shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col"
+        className="relative bg-white w-full max-w-2xl border border-xennov-grey-border shadow-2xl overflow-hidden my-auto max-h-[92vh] flex flex-col"
         onClick={e => e.stopPropagation()}
       >
         {/* Executive Technical Header (Thermo Fisher Style) */}
@@ -69,7 +69,7 @@ export const ProductCategoryModal: React.FC<ProductCategoryModalProps> = ({
             <h4 className="text-[10px] font-mono font-bold uppercase tracking-widest text-xennov-blue mb-2">
               Division Scope
             </h4>
-            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed bg-slate-50 p-3.5 border border-slate-200">
+            <p className="text-xs sm:text-sm text-slate-700 leading-relaxed bg-xennov-grey p-3.5 border border-xennov-grey-border">
               {category.fullDescription}
             </p>
           </div>
@@ -82,7 +82,7 @@ export const ProductCategoryModal: React.FC<ProductCategoryModalProps> = ({
               </h4>
               <div className="space-y-1.5 max-h-52 overflow-y-auto pr-1">
                 {category.subcategories.map((sub, idx) => (
-                  <div key={idx} className="flex items-start gap-2.5 p-2 bg-slate-50 border border-slate-200 text-xs text-xennov-navy hover:border-xennov-blue transition-colors">
+                  <div key={idx} className="flex items-start gap-2.5 p-2 bg-xennov-grey border border-xennov-grey-border text-xs text-xennov-navy hover:border-xennov-blue transition-colors">
                     <ChevronRight className="w-3.5 h-3.5 text-xennov-blue shrink-0 mt-0.5" />
                     <span className="font-medium">{sub}</span>
                   </div>
@@ -98,7 +98,7 @@ export const ProductCategoryModal: React.FC<ProductCategoryModalProps> = ({
             </h4>
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
               {category.highlights.map((h, i) => (
-                <div key={i} className="flex items-start gap-2 text-xs text-xennov-navy bg-slate-50 border border-slate-200 px-2.5 py-2">
+                <div key={i} className="flex items-start gap-2 text-xs text-xennov-navy bg-xennov-grey border border-xennov-grey-border px-2.5 py-2">
                   <CheckCircle2 className="w-3.5 h-3.5 text-xennov-cyan shrink-0 mt-0.5" />
                   <span className="font-medium">{h}</span>
                 </div>
@@ -113,7 +113,7 @@ export const ProductCategoryModal: React.FC<ProductCategoryModalProps> = ({
             </h4>
             <div className="flex flex-wrap gap-1.5">
               {category.commonApplications.map((app, i) => (
-                <span key={i} className="px-2.5 py-1 text-[11px] font-medium text-slate-700 bg-slate-100 border border-slate-200">
+                <span key={i} className="px-2.5 py-1 text-[11px] font-medium text-slate-700 bg-xennov-grey border border-xennov-grey-border">
                   {app}
                 </span>
               ))}
@@ -122,7 +122,7 @@ export const ProductCategoryModal: React.FC<ProductCategoryModalProps> = ({
         </div>
 
         {/* Footer Bar */}
-        <div className="px-6 py-4 bg-slate-50 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+        <div className="px-6 py-4 bg-xennov-grey border-t border-xennov-grey-border flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
           <span className="text-xs text-slate-500">
             Need specifications, volume availability, or quotes for this division?
           </span>

@@ -17,12 +17,12 @@ export default {
           cyan: '#38B6D9',
           'cyan-dark': '#1E9CC0',
           'cyan-light': '#E3F5FA',
-          grey: 'var(--xennov-bg-subtle, #F8FAFC)',
-          'grey-subtle': 'var(--xennov-bg-subtle-alt, #F1F5F9)',
-          'grey-border': 'var(--xennov-bg-border, #E2E8F0)',
-          text: '#172B3A',
-          'text-muted': '#4A6070',
-          'text-light': '#7A95A6',
+          grey: 'var(--xennov-bg-subtle, #F7F7F7)',
+          'grey-subtle': 'var(--xennov-bg-subtle-alt, #F1F9FF)',
+          'grey-border': 'var(--xennov-bg-border, #E5E5E5)',
+          text: '#1B1B1D',
+          'text-muted': '#54545C',
+          'text-light': '#70707A',
         }
       },
       fontFamily: {

@@ -76,13 +76,13 @@ export const About: React.FC<AboutProps> = ({ onRequestQuote, onExploreProducts 
 
               {/* Vision & Mission boxes */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4 mb-6">
-                <div className="p-3.5 bg-slate-50 border border-slate-200">
+                <div className="p-3.5 bg-xennov-grey border border-xennov-grey-border">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-xennov-navy block mb-1">Our Vision</span>
                   <p className="text-[11px] text-slate-600 leading-relaxed">
                     To be a respected and comprehensive scientific solutions provider, recognized for quality, integrity, product diversity and commitment to researchers.
                   </p>
                 </div>
-                <div className="p-3.5 bg-slate-50 border border-slate-200">
+                <div className="p-3.5 bg-xennov-grey border border-xennov-grey-border">
                   <span className="text-[10px] font-bold uppercase tracking-wider text-xennov-navy block mb-1">Our Mission</span>
                   <p className="text-[11px] text-slate-600 leading-relaxed">
                     To make scientific procurement simpler, more accessible and more efficient through a diverse product portfolio and customer-focused solutions.
@@ -121,7 +121,7 @@ export const About: React.FC<AboutProps> = ({ onRequestQuote, onExploreProducts 
 
           {/* Right Column: Clean Enterprise Corporate Credentials & Verification Card */}
           <div className="lg:col-span-5 flex flex-col">
-            <div className="border border-slate-300 bg-white shadow-sm flex flex-col h-full">
+            <div className="border border-xennov-grey-border bg-white shadow-sm flex flex-col h-full">
               
               {/* Header Strip */}
               <div className="bg-xennov-navy-dark text-white p-5 border-b border-slate-800">
@@ -142,12 +142,12 @@ export const About: React.FC<AboutProps> = ({ onRequestQuote, onExploreProducts 
               </div>
 
               {/* 4 Pillars List */}
-              <div className="p-5 sm:p-6 space-y-4 divide-y divide-slate-100 flex-1">
+              <div className="p-5 sm:p-6 space-y-4 divide-y divide-xennov-grey-border/60 flex-1">
                 {credentials.map((cred, idx) => {
                   const Icon = cred.icon;
                   return (
                     <div key={cred.title} className={`${idx !== 0 ? 'pt-4' : ''} flex items-start gap-3.5`}>
-                      <div className="w-8 h-8 rounded-none bg-slate-100 border border-slate-200 text-xennov-navy flex items-center justify-center shrink-0 mt-0.5">
+                      <div className="w-8 h-8 rounded-none bg-xennov-grey border border-xennov-grey-border text-xennov-navy flex items-center justify-center shrink-0 mt-0.5">
                         <Icon className="w-4 h-4 text-xennov-blue" />
                       </div>
                       <div className="space-y-1">

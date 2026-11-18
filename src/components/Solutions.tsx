@@ -39,12 +39,12 @@ export const Solutions: React.FC<SolutionsProps> = ({ onSelectSolution }) => {
             return (
               <div
                 key={sol.id}
-                className="bg-white border border-slate-200 hover:border-xennov-blue shadow-sm hover:shadow-md transition-all duration-200 p-6 flex flex-col justify-between"
+                className="bg-white border border-xennov-grey-border hover:border-xennov-blue shadow-sm hover:shadow-md transition-all duration-200 p-6 flex flex-col justify-between"
               >
                 <div>
                   {/* Top Line: Icon & Service Number */}
                   <div className="flex items-center justify-between mb-4">
-                    <div className="w-10 h-10 bg-slate-50 border border-slate-200 text-xennov-navy flex items-center justify-center">
+                    <div className="w-10 h-10 bg-xennov-grey border border-xennov-grey-border text-xennov-navy flex items-center justify-center">
                       <Icon className="w-5 h-5 text-xennov-blue" />
                     </div>
                     <span className="font-mono text-xs font-bold text-slate-400">
@@ -65,7 +65,7 @@ export const Solutions: React.FC<SolutionsProps> = ({ onSelectSolution }) => {
                   </p>
 
                   {/* Key Points */}
-                  <div className="pt-3 border-t border-slate-100 space-y-2 mb-6">
+                  <div className="pt-3 border-t border-xennov-grey-border/60 space-y-2 mb-6">
                     {sol.keyPoints.map((pt, i) => (
                       <div key={i} className="flex items-start gap-2 text-[11px] text-slate-700">
                         <CheckCircle2 className="w-3.5 h-3.5 text-xennov-cyan shrink-0 mt-0.5" />
