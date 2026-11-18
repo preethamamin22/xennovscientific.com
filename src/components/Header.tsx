@@ -108,7 +108,7 @@ export const Header: React.FC<HeaderProps> = ({ onSelectCategory, onRequestQuote
               <div className="flex flex-col items-start text-left">
                 <div className="flex items-baseline gap-1.5">
                   <span className="text-[19px] font-black tracking-tight text-xennov-navy leading-none">XenNov</span>
-                  <span className="text-[13px] font-bold text-xennov-blue leading-none">Scientific</span>
+                  <span className="text-[13px] font-bold text-xennov-text-muted leading-none">Scientific</span>
                 </div>
                 <span className="text-[9px] font-semibold tracking-[0.16em] text-slate-400 uppercase leading-none mt-0.5">
                   Private Limited

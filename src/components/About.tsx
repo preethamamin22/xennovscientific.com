@@ -124,19 +124,19 @@ export const About: React.FC<AboutProps> = ({ onRequestQuote, onExploreProducts 
             <div className="border border-xennov-grey-border bg-white shadow-sm flex flex-col h-full">
               
               {/* Header Strip */}
-              <div className="bg-xennov-navy-dark text-white p-5 border-b border-slate-800">
+              <div className="bg-xennov-blue text-white p-5 border-b border-xennov-blue-dark">
                 <div className="flex items-center justify-between mb-1.5">
-                  <div className="text-[10px] font-mono font-bold tracking-widest text-xennov-cyan uppercase">
+                  <div className="text-[10px] font-mono font-bold tracking-widest text-white/80 uppercase">
                     Procurement Infrastructure
                   </div>
-                  <span className="text-[10px] bg-white/10 text-slate-300 font-mono px-2 py-0.5 border border-white/10">
+                  <span className="text-[10px] bg-white/20 text-white font-mono px-2 py-0.5 border border-white/20">
                     Karnataka, India
                   </span>
                 </div>
                 <h3 className="text-base font-bold text-white leading-snug">
                   Operational &amp; Sourcing Framework
                 </h3>
-                <p className="text-xs text-slate-400 mt-1">
+                <p className="text-xs text-white/70 mt-1">
                   Built to meet demanding research, industrial QA/QC, and institutional standards.
                 </p>
               </div>

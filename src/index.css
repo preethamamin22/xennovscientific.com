@@ -48,38 +48,50 @@
 }
 
 @layer components {
+  /* Primary CTA — Thermo Fisher red */
   .xn-btn-primary {
-    @apply inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-sm text-xs sm:text-sm font-semibold text-white bg-xennov-blue hover:bg-xennov-blue-dark active:bg-xennov-blue-dark transition-all duration-200 shadow-sm;
+    @apply inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 text-sm font-semibold text-white bg-xennov-blue hover:bg-xennov-blue-dark active:bg-xennov-blue-dark transition-all duration-200;
   }
+  /* Secondary / Navy button */
   .xn-btn-navy {
-    @apply inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-sm text-xs sm:text-sm font-semibold text-white bg-xennov-navy hover:bg-xennov-navy-light transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 text-sm font-semibold text-white bg-xennov-navy hover:bg-xennov-navy-light transition-all duration-200;
   }
+  /* Outline button on white backgrounds */
   .xn-btn-outline {
-    @apply inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 rounded-sm text-xs sm:text-sm font-semibold text-white border border-white/50 hover:border-white hover:bg-white/10 transition-all duration-200;
+    @apply inline-flex items-center justify-center gap-2 px-5 sm:px-6 py-2.5 text-sm font-semibold text-xennov-navy border border-xennov-grey-border hover:border-xennov-blue hover:text-xennov-blue bg-white transition-all duration-200;
   }
+  /* Eyebrow label — TF style: uppercase, red, tight tracking */
   .xn-label {
-    @apply text-[10px] sm:text-[11px] font-bold uppercase tracking-widest text-xennov-blue;
+    @apply text-[11px] font-bold uppercase tracking-widest text-xennov-blue;
   }
+  /* Section headings — TF style: near-black, bold */
   .xn-section-heading {
     @apply text-2xl sm:text-3xl lg:text-4xl font-extrabold text-xennov-navy leading-tight;
   }
   .xn-section-subheading {
-    @apply text-xs sm:text-sm lg:text-base text-xennov-text-muted leading-relaxed font-normal;
+    @apply text-sm sm:text-base text-xennov-text-muted leading-relaxed font-normal;
   }
+  /* Card — white surface with subtle border */
   .xn-card {
     @apply bg-white border border-xennov-grey-border shadow-sm hover:shadow-card-hover transition-all duration-300;
   }
-
-  /* Thermo Fisher-style horizontal rule */
+  /* Thermo Fisher-style horizontal rule — red */
   .xn-rule {
-    @apply w-10 sm:w-12 h-1 bg-xennov-blue rounded-full;
+    @apply w-10 sm:w-12 h-1 bg-xennov-blue;
+  }
+  /* Section alternating background helper */
+  .xn-section-white {
+    @apply bg-white;
+  }
+  .xn-section-grey {
+    @apply bg-xennov-grey;
   }
 }
 
 /* Custom scrollbar — Thermo Fisher neutral */
 ::-webkit-scrollbar { width: 7px; height: 7px; }
 ::-webkit-scrollbar-track { background: #F7F7F7; }
-::-webkit-scrollbar-thumb { background: #CCCCCC; border-radius: 4px; }
+::-webkit-scrollbar-thumb { background: #CCCCCC; border-radius: 2px; }
 ::-webkit-scrollbar-thumb:hover { background: #E71316; }
 
 /* Smooth image rendering */
@@ -92,5 +104,14 @@ img { image-rendering: -webkit-optimize-contrast; max-width: 100%; }
 *:focus-visible {
   outline: 2px solid #E71316;
   outline-offset: 2px;
-  border-radius: 2px;
+}
+
+/* Input focus — TF style */
+input:focus, select:focus, textarea:focus {
+  outline: none;
+}
+
+/* Border-top-4 utility used in Hero form card */
+.border-t-4 {
+  border-top-width: 4px;
 }

@@ -34,7 +34,7 @@ export const Industries: React.FC<IndustriesProps> = ({ onSelectIndustry }) => {
             return (
               <div
                 key={ind.id}
-                className="group bg-white border border-xennov-grey-border hover:border-xennov-blue shadow-sm hover:shadow-md transition-all duration-200 flex flex-col justify-between border-t-2 border-t-xennov-navy hover:border-t-xennov-cyan p-5 sm:p-6"
+                className="group bg-white border border-xennov-grey-border hover:border-xennov-blue shadow-sm hover:shadow-card-hover transition-all duration-200 flex flex-col justify-between border-t-4 border-t-xennov-blue p-5 sm:p-6"
               >
                 <div>
                   {/* Top Bar: Icon + Index */}
@@ -75,7 +75,7 @@ export const Industries: React.FC<IndustriesProps> = ({ onSelectIndustry }) => {
                 <div className="pt-5 mt-5 border-t border-slate-100">
                   <button
                     onClick={() => onSelectIndustry?.(ind.title)}
-                    className="w-full flex items-center justify-between py-2 px-3 text-xs font-semibold text-xennov-navy bg-slate-50 hover:bg-xennov-navy hover:text-white border border-slate-200 transition-colors"
+                    className="w-full flex items-center justify-between py-2 px-3 text-xs font-semibold text-xennov-blue bg-xennov-cyan-light hover:bg-xennov-blue hover:text-white border border-xennov-grey-border transition-colors"
                   >
                     <span>Request Sector RFQ</span>
                     <ArrowRight className="w-3.5 h-3.5" />

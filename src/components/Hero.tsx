@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, ShieldCheck, Clock, Send, AlertCircle, MessageSquare } from 'lucide-react';
+import { ArrowRight, CheckCircle2, Send, MessageSquare } from 'lucide-react';
 import { productCategories } from '../data/categories';
 import { QuoteFormData } from '../types';
 
@@ -54,9 +54,7 @@ export const Hero: React.FC<HeroProps> = ({
     }
 
     setSubmitted(true);
-    if (onSubmitQuote) {
-      onSubmitQuote(formData);
-    }
+    if (onSubmitQuote) onSubmitQuote(formData);
   };
 
   const handleWhatsApp = () => {
@@ -67,268 +65,238 @@ export const Hero: React.FC<HeroProps> = ({
   };
 
   return (
-    <section id="hero" className="relative bg-xennov-navy-dark text-white border-b border-slate-800">
-      {/* Subtle clean scientific grid pattern background */}
-      <div 
-        className="absolute inset-0 opacity-[0.035] pointer-events-none"
-        style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #E71316 1px, transparent 0)',
-          backgroundSize: '32px 32px'
-        }}
-      />
-      
-      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        
-        {/* Thermo Fisher-style 2-Column Landing Layout */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
-          
-          {/* Left Column: Authoritative Content & Objectives */}
+    <section id="hero" className="relative bg-white border-b border-xennov-grey-border">
+      {/* Top red accent bar — Thermo Fisher style */}
+      <div className="h-1 w-full bg-xennov-blue" />
+
+      {/* Hero Content */}
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
+
+          {/* Left Column */}
           <div className="lg:col-span-7 space-y-6">
-            
-            {/* Breadcrumb Eyebrow */}
-            <div className="inline-flex items-center gap-2 text-[9px] sm:text-[10px] md:text-[11px] font-bold tracking-wider sm:tracking-[0.18em] uppercase text-xennov-cyan bg-white/5 border border-white/10 px-2.5 sm:px-3 py-1 max-w-full">
-              <span className="leading-normal">SCIENTIFIC PRODUCTS &bull; LABORATORY EQUIPMENT &bull; PROCUREMENT SOLUTIONS</span>
+
+            {/* Eyebrow label */}
+            <div className="inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-xennov-blue">
+              Scientific Products &bull; Laboratory Equipment &bull; Procurement Solutions
             </div>
 
-            {/* Main Headline */}
-            <h1 className="text-2xl sm:text-4xl lg:text-[46px] font-black text-white leading-[1.15] tracking-tight">
+            {/* Main Headline — TF style: dark text on white */}
+            <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-black text-xennov-navy leading-[1.12] tracking-tight">
               Advancing Science.{' '}
-              <span className="text-xennov-cyan block sm:inline">Enabling Discovery.</span>
+              <span className="text-xennov-blue">Enabling Discovery.</span>
             </h1>
 
-            {/* Supporting Heading */}
-            <h2 className="text-base sm:text-lg font-semibold text-slate-200 leading-snug">
+            <h2 className="text-base sm:text-lg font-semibold text-xennov-text-muted leading-snug">
               Your One-Stop Scientific &amp; Laboratory Solutions Partner.
             </h2>
 
-            {/* Description */}
-            <p className="text-xs sm:text-sm text-slate-300 leading-relaxed max-w-2xl font-normal">
+            <p className="text-sm text-xennov-text-muted leading-relaxed max-w-2xl">
               Discover a comprehensive range of scientific instruments, laboratory equipment, chemicals, reagents, research consumables, and diagnostic solutions. XenNov Scientific connects research institutions, biotechnology firms, pharmaceutical manufacturers, and clinical laboratories across India with verified products and structured procurement support.
             </p>
 
-            {/* Thermo Fisher-style "Key Capabilities" / Learning Objectives Box */}
-            <div className="bg-white/5 border border-white/15 p-5 space-y-3">
-              <div className="text-[10px] font-bold uppercase tracking-widest text-xennov-cyan">
+            {/* Key Capabilities box — TF style: light grey background */}
+            <div className="bg-xennov-grey border border-xennov-grey-border p-5 space-y-3">
+              <div className="text-[11px] font-bold uppercase tracking-widest text-xennov-blue">
                 Key Procurement Capabilities:
               </div>
               <ul className="space-y-2.5">
                 {keyObjectives.map((obj, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-xs text-slate-200">
-                    <CheckCircle2 className="w-4 h-4 text-xennov-cyan shrink-0 mt-0.5" />
+                  <li key={i} className="flex items-start gap-2.5 text-xs text-xennov-text-muted">
+                    <CheckCircle2 className="w-4 h-4 text-xennov-blue shrink-0 mt-0.5" />
                     <span>{obj}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Action buttons */}
-            <div className="flex flex-wrap items-center gap-3 pt-2">
+            {/* CTA Buttons — TF style */}
+            <div className="flex flex-wrap items-center gap-3">
               <button
                 onClick={onExploreProducts}
-                className="inline-flex items-center gap-2 px-5 py-2.5 bg-xennov-blue hover:bg-xennov-blue-dark text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-xennov-blue hover:bg-xennov-blue-dark text-white text-sm font-semibold transition-colors"
               >
-                <span>Explore 12 Divisions</span>
-                <ArrowRight className="w-3.5 h-3.5" />
+                Explore 12 Divisions
+                <ArrowRight className="w-4 h-4" />
               </button>
               <button
                 onClick={onExploreBrands}
-                className="inline-flex items-center gap-2 px-4 py-2.5 bg-transparent hover:bg-white/10 text-slate-300 hover:text-white text-xs font-semibold uppercase tracking-wider border border-white/30 transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-xennov-navy border border-xennov-grey-border hover:border-xennov-blue hover:text-xennov-blue bg-white transition-colors"
               >
-                <span>Brand Directory</span>
+                Brand Directory
               </button>
             </div>
 
-            {/* Three Institutional Trust Badges */}
-            <div className="pt-4 border-t border-white/10 grid grid-cols-3 gap-3 text-slate-300">
-              <div className="text-[11px]">
-                <strong className="block text-white font-bold">12 Divisions</strong>
-                <span className="text-[10px] text-slate-400">Complete Taxonomy</span>
+            {/* Trust badges — TF style: horizontal pills on white */}
+            <div className="pt-4 border-t border-xennov-grey-border flex flex-wrap gap-6 text-sm">
+              <div>
+                <strong className="block text-xennov-navy font-bold text-sm">12 Divisions</strong>
+                <span className="text-xs text-xennov-text-muted">Complete Taxonomy</span>
               </div>
-              <div className="text-[11px]">
-                <strong className="block text-white font-bold">Pan-India Support</strong>
-                <span className="text-[10px] text-slate-400">Bengaluru Hub</span>
+              <div className="border-l border-xennov-grey-border pl-6">
+                <strong className="block text-xennov-navy font-bold text-sm">Pan-India Support</strong>
+                <span className="text-xs text-xennov-text-muted">Bengaluru Hub</span>
               </div>
-              <div className="text-[11px]">
-                <strong className="block text-white font-bold">GST Invoicing</strong>
-                <span className="text-[10px] text-slate-400">Grant &amp; Tender Ready</span>
+              <div className="border-l border-xennov-grey-border pl-6">
+                <strong className="block text-xennov-navy font-bold text-sm">GST Invoicing</strong>
+                <span className="text-xs text-xennov-text-muted">Grant &amp; Tender Ready</span>
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Clean, High-Converting Quotation Form (Thermo Fisher Form Card) */}
+          {/* Right Column: RFQ Form — TF style white card with red top border */}
           <div className="lg:col-span-5">
-            <div className="bg-white text-xennov-text p-6 sm:p-7 border border-xennov-grey-border shadow-2xl">
-              
-              <div className="border-b border-xennov-grey-border pb-3 mb-4">
-                <div className="text-[10px] font-bold uppercase tracking-widest text-xennov-blue">
+            <div className="bg-white border border-xennov-grey-border shadow-card border-t-4 border-t-xennov-blue">
+
+              <div className="px-6 py-5 border-b border-xennov-grey-border">
+                <div className="text-[11px] font-bold uppercase tracking-widest text-xennov-blue mb-1">
                   Commercial Quotation &bull; RFQ
                 </div>
-                <h3 className="text-lg font-black text-xennov-navy leading-tight mt-0.5">
+                <h3 className="text-xl font-black text-xennov-navy leading-tight">
                   Request a Formal Quote
                 </h3>
-                <p className="text-[11px] text-xennov-text-muted mt-0.5">
+                <p className="text-xs text-xennov-text-muted mt-1">
                   Connect with our Bengaluru procurement desk for pricing and availability.
                 </p>
               </div>
 
-              {submitted ? (
-                <div className="py-8 text-center space-y-3">
-                  <div className="w-12 h-12 bg-emerald-100 text-emerald-600 flex items-center justify-center mx-auto border border-emerald-300">
-                    <CheckCircle2 className="w-6 h-6" />
-                  </div>
-                  <h4 className="text-base font-bold text-xennov-navy">Requisition Received</h4>
-                  <p className="text-xs text-slate-600 max-w-xs mx-auto">
-                    Thank you. Your request has been logged. Our technical procurement desk will review your specifications and contact you shortly.
-                  </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="xn-btn-navy text-xs px-4 py-2 mt-2"
-                  >
-                    Submit Another Request
-                  </button>
-                </div>
-              ) : (
-                <form onSubmit={handleHeroSubmit} noValidate className="space-y-3.5">
-                  
-                  {/* Full Name */}
-                  <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-xennov-navy mb-1">
-                      Full Name *
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Dr. / Mr. / Ms. Name"
-                      value={formData.fullName}
-                      onChange={e => setFormData({ ...formData, fullName: e.target.value })}
-                      className={`w-full px-3 py-2 text-xs border bg-slate-50 focus:bg-white focus:outline-none transition-colors ${
-                        errors.fullName ? 'border-red-400 bg-red-50/20' : 'border-xennov-grey-border focus:border-xennov-blue'
-                      }`}
-                    />
-                    {errors.fullName && <p className="text-[10px] text-red-600 mt-0.5">{errors.fullName}</p>}
-                  </div>
-
-                  {/* Organisation */}
-                  <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-xennov-navy mb-1">
-                      Organisation / University / Hospital *
-                    </label>
-                    <input
-                      type="text"
-                      placeholder="Institution or Company Name"
-                      value={formData.organisation}
-                      onChange={e => setFormData({ ...formData, organisation: e.target.value })}
-                      className={`w-full px-3 py-2 text-xs border bg-slate-50 focus:bg-white focus:outline-none transition-colors ${
-                        errors.organisation ? 'border-red-400 bg-red-50/20' : 'border-xennov-grey-border focus:border-xennov-blue'
-                      }`}
-                    />
-                    {errors.organisation && <p className="text-[10px] text-red-600 mt-0.5">{errors.organisation}</p>}
-                  </div>
-
-                  {/* Email & Phone Grid */}
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                    <div>
-                      <label className="block text-[10px] font-bold uppercase tracking-wider text-xennov-navy mb-1">
-                        Business Email *
-                      </label>
-                      <input
-                        type="email"
-                        placeholder="name@institution.com"
-                        value={formData.email}
-                        onChange={e => setFormData({ ...formData, email: e.target.value })}
-                        className={`w-full px-3 py-2 text-xs border bg-slate-50 focus:bg-white focus:outline-none transition-colors ${
-                          errors.email ? 'border-red-400 bg-red-50/20' : 'border-xennov-grey-border focus:border-xennov-blue'
-                        }`}
-                      />
-                      {errors.email && <p className="text-[10px] text-red-600 mt-0.5">{errors.email}</p>}
+              <div className="px-6 py-5">
+                {submitted ? (
+                  <div className="py-8 text-center space-y-3">
+                    <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto">
+                      <CheckCircle2 className="w-6 h-6" />
                     </div>
-
-                    <div>
-                      <label className="block text-[10px] font-bold uppercase tracking-wider text-xennov-navy mb-1">
-                        Contact Phone *
-                      </label>
-                      <input
-                        type="tel"
-                        placeholder="+91 98765 43210"
-                        value={formData.phone}
-                        onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                        className={`w-full px-3 py-2 text-xs border bg-slate-50 focus:bg-white focus:outline-none transition-colors ${
-                          errors.phone ? 'border-red-400 bg-red-50/20' : 'border-xennov-grey-border focus:border-xennov-blue'
-                        }`}
-                      />
-                      {errors.phone && <p className="text-[10px] text-red-600 mt-0.5">{errors.phone}</p>}
-                    </div>
-                  </div>
-
-                  {/* Product Category Dropdown */}
-                  <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-xennov-navy mb-1">
-                      Product Division / Service Interest *
-                    </label>
-                    <select
-                      value={formData.category}
-                      onChange={e => setFormData({ ...formData, category: e.target.value })}
-                      className={`w-full px-3 py-2 text-xs border bg-slate-50 focus:bg-white focus:outline-none transition-colors ${
-                        errors.category ? 'border-red-400 bg-red-50/20' : 'border-xennov-grey-border focus:border-xennov-blue'
-                      }`}
-                    >
-                      <option value="">Select a scientific division...</option>
-                      {productCategories.map(c => (
-                        <option key={c.id} value={c.title}>
-                          {c.number}. {c.title}
-                        </option>
-                      ))}
-                      <option value="Institutional & Bulk Procurement">Institutional &amp; Bulk Procurement</option>
-                      <option value="Custom Product Sourcing">Custom Product Sourcing</option>
-                      <option value="Manufacturer & Distribution Partnerships">Manufacturer &amp; Distribution Partnerships</option>
-                    </select>
-                    {errors.category && <p className="text-[10px] text-red-600 mt-0.5">{errors.category}</p>}
-                  </div>
-
-                  {/* Specifications Message */}
-                  <div>
-                    <label className="block text-[10px] font-bold uppercase tracking-wider text-xennov-navy mb-1">
-                      Product Details / Cat # / Specifications <span className="text-slate-400 font-normal">(optional)</span>
-                    </label>
-                    <textarea
-                      rows={2}
-                      placeholder="Mention product codes, quantities, or technical requirements..."
-                      value={formData.message}
-                      onChange={e => setFormData({ ...formData, message: e.target.value })}
-                      className="w-full px-3 py-2 text-xs border border-xennov-grey-border bg-slate-50 focus:bg-white focus:outline-none focus:border-xennov-blue transition-colors resize-none"
-                    />
-                  </div>
-
-                  {/* Submit Button */}
-                  <button
-                    type="submit"
-                    className="w-full flex items-center justify-center gap-2 py-2.5 px-4 bg-xennov-blue hover:bg-xennov-blue-dark active:bg-xennov-blue text-white text-xs font-bold uppercase tracking-wider transition-colors shadow-sm"
-                  >
-                    <span>Submit Quotation Request</span>
-                    <ArrowRight className="w-3.5 h-3.5" />
-                  </button>
-
-                  {/* WhatsApp Secondary Link */}
-                  <div className="pt-2 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-500">
-                    <span>Need instant desk verification?</span>
+                    <h4 className="text-base font-bold text-xennov-navy">Requisition Received</h4>
+                    <p className="text-xs text-xennov-text-muted max-w-xs mx-auto">
+                      Thank you. Your request has been logged. Our technical procurement desk will review your specifications and contact you shortly.
+                    </p>
                     <button
-                      type="button"
-                      onClick={handleWhatsApp}
-                      className="text-emerald-700 hover:text-emerald-800 font-bold inline-flex items-center gap-1"
+                      onClick={() => setSubmitted(false)}
+                      className="inline-flex items-center gap-2 px-4 py-2 mt-2 bg-xennov-navy text-white text-xs font-semibold hover:bg-xennov-navy-light transition-colors"
                     >
-                      <MessageSquare className="w-3.5 h-3.5" />
-                      <span>WhatsApp Desk</span>
+                      Submit Another Request
                     </button>
                   </div>
+                ) : (
+                  <form onSubmit={handleHeroSubmit} noValidate className="space-y-4">
 
-                </form>
-              )}
+                    <div>
+                      <label className="block text-xs font-semibold text-xennov-navy mb-1.5">Full Name *</label>
+                      <input
+                        type="text"
+                        placeholder="Dr. / Mr. / Ms. Name"
+                        value={formData.fullName}
+                        onChange={e => setFormData({ ...formData, fullName: e.target.value })}
+                        className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-colors ${
+                          errors.fullName ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
+                        }`}
+                      />
+                      {errors.fullName && <p className="text-xs text-red-600 mt-1">{errors.fullName}</p>}
+                    </div>
 
+                    <div>
+                      <label className="block text-xs font-semibold text-xennov-navy mb-1.5">Organisation / University / Hospital *</label>
+                      <input
+                        type="text"
+                        placeholder="Institution or Company Name"
+                        value={formData.organisation}
+                        onChange={e => setFormData({ ...formData, organisation: e.target.value })}
+                        className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-colors ${
+                          errors.organisation ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
+                        }`}
+                      />
+                      {errors.organisation && <p className="text-xs text-red-600 mt-1">{errors.organisation}</p>}
+                    </div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                      <div>
+                        <label className="block text-xs font-semibold text-xennov-navy mb-1.5">Business Email *</label>
+                        <input
+                          type="email"
+                          placeholder="name@institution.com"
+                          value={formData.email}
+                          onChange={e => setFormData({ ...formData, email: e.target.value })}
+                          className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-colors ${
+                            errors.email ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
+                          }`}
+                        />
+                        {errors.email && <p className="text-xs text-red-600 mt-1">{errors.email}</p>}
+                      </div>
+                      <div>
+                        <label className="block text-xs font-semibold text-xennov-navy mb-1.5">Contact Phone *</label>
+                        <input
+                          type="tel"
+                          placeholder="+91 98765 43210"
+                          value={formData.phone}
+                          onChange={e => setFormData({ ...formData, phone: e.target.value })}
+                          className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-colors ${
+                            errors.phone ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
+                          }`}
+                        />
+                        {errors.phone && <p className="text-xs text-red-600 mt-1">{errors.phone}</p>}
+                      </div>
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-xennov-navy mb-1.5">Product Division / Service Interest *</label>
+                      <select
+                        value={formData.category}
+                        onChange={e => setFormData({ ...formData, category: e.target.value })}
+                        className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 bg-white transition-colors ${
+                          errors.category ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
+                        }`}
+                      >
+                        <option value="">Select a scientific division...</option>
+                        {productCategories.map(c => (
+                          <option key={c.id} value={c.title}>{c.number}. {c.title}</option>
+                        ))}
+                        <option value="Institutional & Bulk Procurement">Institutional &amp; Bulk Procurement</option>
+                        <option value="Custom Product Sourcing">Custom Product Sourcing</option>
+                        <option value="Manufacturer & Distribution Partnerships">Manufacturer &amp; Distribution Partnerships</option>
+                      </select>
+                      {errors.category && <p className="text-xs text-red-600 mt-1">{errors.category}</p>}
+                    </div>
+
+                    <div>
+                      <label className="block text-xs font-semibold text-xennov-navy mb-1.5">
+                        Product Details / Cat # / Specifications <span className="text-xennov-text-muted font-normal">(optional)</span>
+                      </label>
+                      <textarea
+                        rows={2}
+                        placeholder="Mention product codes, quantities, or technical requirements..."
+                        value={formData.message}
+                        onChange={e => setFormData({ ...formData, message: e.target.value })}
+                        className="w-full px-3 py-2.5 text-sm border border-xennov-grey-border focus:outline-none focus:ring-1 focus:border-xennov-blue focus:ring-xennov-blue transition-colors resize-none"
+                      />
+                    </div>
+
+                    <button
+                      type="submit"
+                      className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-xennov-blue hover:bg-xennov-blue-dark text-white text-sm font-semibold transition-colors"
+                    >
+                      Submit Quotation Request
+                      <ArrowRight className="w-4 h-4" />
+                    </button>
+
+                    <div className="pt-3 border-t border-xennov-grey-border flex items-center justify-between text-xs text-xennov-text-muted">
+                      <span>Need instant desk verification?</span>
+                      <button
+                        type="button"
+                        onClick={handleWhatsApp}
+                        className="text-emerald-700 hover:text-emerald-800 font-semibold inline-flex items-center gap-1"
+                      >
+                        <MessageSquare className="w-3.5 h-3.5" />
+                        WhatsApp Desk
+                      </button>
+                    </div>
+                  </form>
+                )}
+              </div>
             </div>
           </div>
 
         </div>
-
       </div>
     </section>
   );

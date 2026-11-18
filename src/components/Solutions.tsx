@@ -79,7 +79,7 @@ export const Solutions: React.FC<SolutionsProps> = ({ onSelectSolution }) => {
                 <div className="pt-4 border-t border-slate-100">
                   <button
                     onClick={() => onSelectSolution(sol.title)}
-                    className="w-full flex items-center justify-between py-2 px-3 text-xs font-semibold text-xennov-navy bg-slate-50 hover:bg-xennov-navy hover:text-white border border-slate-200 transition-colors"
+                    className="w-full flex items-center justify-between py-2 px-3 text-xs font-semibold text-xennov-blue bg-xennov-cyan-light hover:bg-xennov-blue hover:text-white border border-xennov-grey-border transition-colors"
                   >
                     <span>Enquire About This Service</span>
                     <ArrowRight className="w-3.5 h-3.5" />
