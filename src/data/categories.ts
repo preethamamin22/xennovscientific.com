@@ -27,7 +27,7 @@ export const productCategories: ProductCategory[] = [
     title: 'Analytical Instruments & Chromatography',
     shortDescription: 'HPLC, GC columns, spectrophotometers, mass spectrometry consumables, and analytical detection systems.',
     fullDescription: 'High-precision analytical instrumentation and chromatography consumables designed for quantitative analysis, purity testing, and molecular characterization across pharmaceutical and research laboratories.',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
+    image: '/xennov-logo.jpg',
     iconName: 'Activity',
     highlights: ['HPLC & UHPLC Columns', 'UV-Vis Spectrophotometers', 'Chromatography Vials & Caps', 'Certified Reference Standards'],
     subcategories: [

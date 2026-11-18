@@ -11,7 +11,7 @@ export const solutions: Solution[] = [
       'Batch traceability and Certificate of Analysis (CoA) documentation',
       'Dedicated procurement liaison for university and corporate departments'
     ],
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80'
+    image: '/xennov-logo.jpg'
   },
   {
     id: 'institutional-bulk',

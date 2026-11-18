@@ -38,7 +38,7 @@ export const featuredProducts: ProductItem[] = [
     brand: 'XenNov Verified Sourcing',
     shortDescription: 'Intermediate volume conical tube bridging 2 mL micro-tubes and 15 mL falcon tubes, optimized for sample processing and storage.',
     fullDescription: 'Engineered for intermediate volumes where 15 mL tubes generate excessive dead volume. Features high-transparency medical-grade polypropylene, high chemical resistance, and leak-proof screw closure with silicone seal ring. Suitable for cell pelleting, reagent aliquotting, and buffer formulation.',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
+    image: '/xennov-logo.jpg',
     availability: 'Available on Enquiry',
     specifications: {
       'Nominal Capacity': '5.0 mL',
@@ -319,7 +319,7 @@ export const featuredProducts: ProductItem[] = [
     brand: 'XenNov Verified Sourcing',
     shortDescription: 'First hydrolytic class borosilicate Type 1 glass autosampler vials with pre-slit PTFE/silicone septa.',
     fullDescription: 'Universally compatible with Agilent, Waters, Shimadzu, and Thermo autosamplers. Precision neck geometry prevents autosampler needle damage. Bonded cap-septa technology prevents septa push-through during piercing.',
-    image: 'https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80',
+    image: '/xennov-logo.jpg',
     availability: 'Available on Enquiry',
     specifications: {
       'Volume / Size': '2.0 mL (12 x 32 mm standard autosampler dimensions)',
