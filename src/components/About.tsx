@@ -171,10 +171,10 @@ export const About: React.FC<AboutProps> = ({ onRequestQuote, onExploreProducts 
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="text-[10px] text-slate-500 font-bold uppercase tracking-wider">
-                      Distribution Gateway
+                      Headquarters &amp; Distribution
                     </div>
                     <div className="text-xs font-bold text-xennov-navy truncate">
-                      Bengaluru, Karnataka, India
+                      Kamakshipalya, Magadi Main Road, Bangalore 560079
                     </div>
                   </div>
                   <div className="text-right shrink-0">

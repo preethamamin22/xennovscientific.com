@@ -46,9 +46,11 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             </p>
 
             <div className="space-y-2 text-xs text-slate-400 pt-2 border-t border-slate-800">
-              <div className="flex items-center gap-2">
-                <MapPin className="w-3.5 h-3.5 text-xennov-cyan shrink-0" />
-                <span>Bengaluru, Karnataka, India</span>
+              <div className="flex items-start gap-2">
+                <MapPin className="w-3.5 h-3.5 text-xennov-cyan shrink-0 mt-0.5" />
+                <span className="leading-snug">
+                  C-204, Soundarya Kamakshi, Magadi Main Road, Kamakshipalya, Bangalore 560079
+                </span>
               </div>
               <div className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-xennov-cyan shrink-0" />

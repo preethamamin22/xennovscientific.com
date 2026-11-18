@@ -3,6 +3,14 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Centralized Background & Surface Theme Tokens (Easily Customizable) */
+  --xennov-bg-main: #FFFFFF;
+  --xennov-bg-subtle: #F8FAFC;
+  --xennov-bg-subtle-alt: #F1F5F9;
+  --xennov-bg-border: #E2E8F0;
+}
+
 @layer base {
   html {
     scroll-behavior: smooth;

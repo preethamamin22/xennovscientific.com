@@ -14,7 +14,8 @@ Built in accordance with the official **Website Design & Content Brief** and ref
 - **Brand:** XenNov Scientific Private Limited
 - **Tagline:** *"Advancing Science. Enabling Discovery."*
 - **Positioning:** *"Your One-Stop Scientific & Laboratory Solutions Partner."*
-- **Headquarters:** Bengaluru, Karnataka, India
+- **Registered Office:** C-204, Soundarya Kamakshi, Magadi Main Road, Kamakshipalya, Bangalore 560079, Karnataka, India
+- **Contact:** +91 82175 24813 | info.xennov@gmail.com
 - **Visual Design Language:**
   - **Primary Navy:** `#102C4C`
   - **Secondary Blue:** `#1677B8`

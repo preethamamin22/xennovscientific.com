@@ -32,9 +32,10 @@ export const ContactSection: React.FC = () => {
                 {[
                   {
                     icon: MapPin,
-                    label: 'Registered Location',
-                    value: 'Bengaluru, Karnataka, India',
-                    sub: '[Office Address Placeholder – Commercial Facility / Tech Corridor]',
+                    label: 'Registered Corporate Office',
+                    value: 'C-204, Soundarya Kamakshi, Magadi Main Road, Kamakshipalya, Bangalore 560079',
+                    sub: 'XenNov Scientific Private Limited • Karnataka Operations',
+                    href: 'https://maps.google.com/?q=Soundarya+Kamakshi,+Magadi+Main+Road,+Kamakshipalya,+Bangalore+560079'
                   },
                   {
                     icon: Mail,
@@ -87,37 +88,37 @@ export const ContactSection: React.FC = () => {
           <div className="lg:col-span-3 flex flex-col min-h-[320px] sm:min-h-[420px] border border-xennov-grey-border shadow-sm overflow-hidden bg-slate-100 relative">
             <div className="relative flex-1 w-full h-full min-h-[280px]">
               <iframe
-                title="XenNov Scientific – Bengaluru Location"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d248849.88653909243!2d77.49085452814809!3d12.953960000000003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1670c9b44e6d%3A0xf8dfc3e8517e4fe0!2sBengaluru%2C%20Karnataka!5e0!3m2!1sen!2sin!4v1716300000000!5m2!1sen!2sin"
+                title="XenNov Scientific – Kamakshipalya, Bangalore Location"
+                src="https://maps.google.com/maps?q=Soundarya+Kamakshi,+Magadi+Main+Road,+Kamakshipalya,+Bangalore+560079&t=&z=15&ie=UTF8&iwloc=&output=embed"
                 width="100%"
                 height="100%"
                 style={{ border: 0, minHeight: '280px' }}
                 allowFullScreen={false}
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
-                className="w-full h-full grayscale-[20%] contrast-[1.05]"
+                className="w-full h-full grayscale-[15%] contrast-[1.05]"
               />
 
               {/* Overlay badge */}
               <div className="absolute top-3 left-3 bg-white/95 border border-slate-200 shadow-sm px-2.5 py-1.5 sm:px-3 sm:py-2">
                 <div className="flex items-center gap-1.5 mb-0.5">
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                  <span className="text-[10px] sm:text-[11px] font-bold text-xennov-navy">Bengaluru Gateway</span>
+                  <span className="text-[10px] sm:text-[11px] font-bold text-xennov-navy">Kamakshipalya Facility</span>
                 </div>
-                <div className="text-[9px] sm:text-[10px] text-slate-500">Karnataka, India &bull; Scientific Distribution</div>
+                <div className="text-[9px] sm:text-[10px] text-slate-500">C-204 Soundarya Kamakshi, Magadi Main Rd, Bangalore</div>
               </div>
             </div>
 
             {/* Map footer */}
             <div className="bg-white border-t border-xennov-grey-border flex items-center justify-between px-3 sm:px-4 py-2 sm:py-2.5 text-[10px] sm:text-xs text-slate-500">
-              <span className="truncate mr-2">Bengaluru, Karnataka &bull; Google Maps</span>
+              <span className="truncate mr-2 font-mono text-[11px]">Kamakshipalya, Magadi Main Road, Bangalore 560079</span>
               <a
-                href="https://maps.google.com/?q=Bengaluru,Karnataka,India"
+                href="https://maps.google.com/?q=Soundarya+Kamakshi,+Magadi+Main+Road,+Kamakshipalya,+Bangalore+560079"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-xennov-blue hover:text-xennov-navy font-semibold flex items-center gap-1 transition-colors shrink-0"
               >
-                <span>Open Maps</span>
+                <span>Open in Maps</span>
                 <ExternalLink className="w-3 h-3" />
               </a>
             </div>

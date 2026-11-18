@@ -61,7 +61,7 @@ export const Header: React.FC<HeaderProps> = ({ onSelectCategory, onRequestQuote
           <div className="flex items-center gap-6">
             <span className="flex items-center gap-1.5">
               <MapPin className="w-3 h-3 text-xennov-cyan shrink-0" />
-              Bengaluru, Karnataka, India
+              Kamakshipalya, Bangalore 560079
             </span>
             <span className="text-slate-600">|</span>
             <a href="mailto:info.xennov@gmail.com" className="flex items-center gap-1.5 hover:text-white transition-colors">
