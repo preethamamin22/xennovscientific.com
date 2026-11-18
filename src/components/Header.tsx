@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { ChevronDown, Menu, X, ArrowRight, Phone, Mail, MapPin, Search } from 'lucide-react';
 import { productCategories } from '../data/categories';
+import { Logo } from './Logo';
 
 interface HeaderProps {
   onSelectCategory?: (categoryTitle: string) => void;
@@ -94,26 +95,10 @@ export const Header: React.FC<HeaderProps> = ({ onSelectCategory, onRequestQuote
             {/* Logo */}
             <button
               onClick={() => scrollTo('hero')}
-              className="flex items-center gap-3 shrink-0 group focus:outline-none"
+              className="flex items-center shrink-0 group focus:outline-none"
               aria-label="XenNov Scientific – Home"
             >
-              <div className="w-9 h-9 bg-xennov-navy flex items-center justify-center group-hover:bg-xennov-navy-light transition-colors">
-                <svg viewBox="0 0 36 36" className="w-5 h-5" fill="none">
-                  <path d="M13 5h10M15 5v9L9 25a4 4 0 003.5 6h11A4 4 0 0027 25L21 14V5" stroke="#FFFFFF" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
-                  <circle cx="18" cy="22" r="2" fill="#FFFFFF" opacity="0.9"/>
-                  <circle cx="14" cy="27" r="1.2" fill="#E71316" opacity="0.9"/>
-                </svg>
-              </div>
-
-              <div className="flex flex-col items-start text-left">
-                <div className="flex items-baseline gap-1.5">
-                  <span className="text-[19px] font-black tracking-tight text-xennov-navy leading-none">XenNov</span>
-                  <span className="text-[13px] font-bold text-xennov-text-muted leading-none">Scientific</span>
-                </div>
-                <span className="text-[9px] font-semibold tracking-[0.16em] text-slate-400 uppercase leading-none mt-0.5">
-                  Private Limited
-                </span>
-              </div>
+              <Logo variant="light" size="md" />
             </button>
 
             {/* Center Navigation */}
