@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import { ArrowRight, CheckCircle2, Send, MessageSquare } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { ArrowRight, CheckCircle2, MessageSquare, FlaskConical, Microscope, Beaker } from 'lucide-react';
 import { productCategories } from '../data/categories';
 import { QuoteFormData } from '../types';
 
@@ -29,6 +29,13 @@ export const Hero: React.FC<HeroProps> = ({
   });
   const [errors, setErrors] = useState<Partial<Record<keyof QuoteFormData, string>>>({});
   const [submitted, setSubmitted] = useState(false);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    // Trigger animations after mount
+    const t = setTimeout(() => setMounted(true), 50);
+    return () => clearTimeout(t);
+  }, []);
 
   const keyObjectives = [
     'Comprehensive scientific portfolio spanning 12 specialized laboratory divisions',
@@ -65,44 +72,85 @@ export const Hero: React.FC<HeroProps> = ({
   };
 
   return (
-    <section id="hero" className="relative bg-white border-b border-xennov-grey-border">
-      {/* Top red accent bar — Thermo Fisher style */}
-      <div className="h-1 w-full bg-xennov-blue" />
+    <section id="hero" className="relative bg-white border-b border-xennov-grey-border overflow-hidden">
+
+      {/* Animated red top accent bar */}
+      <div className="relative h-1 w-full bg-xennov-grey-border overflow-hidden">
+        <div className="xn-bar-sweep" />
+      </div>
+
+      {/* Floating background science icons — decorative */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden select-none" aria-hidden="true">
+        <FlaskConical
+          className="absolute text-xennov-blue/[0.04] xn-float-1"
+          style={{ width: 160, height: 160, top: '10%', right: '8%' }}
+        />
+        <Microscope
+          className="absolute text-xennov-blue/[0.04] xn-float-2"
+          style={{ width: 120, height: 120, top: '50%', right: '22%' }}
+        />
+        <Beaker
+          className="absolute text-xennov-blue/[0.04] xn-float-3"
+          style={{ width: 90, height: 90, bottom: '12%', right: '5%' }}
+        />
+        {/* Soft red circle glow */}
+        <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full bg-xennov-blue/[0.04] xn-pulse-slow" />
+        <div className="absolute -bottom-32 -left-16 w-80 h-80 rounded-full bg-xennov-blue/[0.03] xn-pulse-slow" style={{ animationDelay: '1.5s' }} />
+      </div>
 
       {/* Hero Content */}
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 lg:py-14">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-start">
 
-          {/* Left Column */}
+          {/* Left Column — staggered fade-in-up */}
           <div className="lg:col-span-7 space-y-6">
 
-            {/* Eyebrow label */}
-            <div className="inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-xennov-blue">
+            {/* Eyebrow */}
+            <div
+              className={`xn-anim-fade-up inline-flex items-center gap-2 text-[11px] font-bold tracking-widest uppercase text-xennov-blue ${mounted ? 'xn-anim-visible' : ''}`}
+              style={{ transitionDelay: '0ms' }}
+            >
               Scientific Products &bull; Laboratory Equipment &bull; Procurement Solutions
             </div>
 
-            {/* Main Headline — TF style: dark text on white */}
-            <h1 className="text-3xl sm:text-4xl lg:text-[44px] font-black text-xennov-navy leading-[1.12] tracking-tight">
+            {/* Main Headline */}
+            <h1
+              className={`xn-anim-fade-up text-3xl sm:text-4xl lg:text-[44px] font-black text-xennov-navy leading-[1.12] tracking-tight ${mounted ? 'xn-anim-visible' : ''}`}
+              style={{ transitionDelay: '80ms' }}
+            >
               Advancing Science.{' '}
-              <span className="text-xennov-blue">Enabling Discovery.</span>
+              <span className="text-xennov-blue xn-text-shimmer">Enabling Discovery.</span>
             </h1>
 
-            <h2 className="text-base sm:text-lg font-semibold text-xennov-text-muted leading-snug">
+            <h2
+              className={`xn-anim-fade-up text-base sm:text-lg font-semibold text-xennov-text-muted leading-snug ${mounted ? 'xn-anim-visible' : ''}`}
+              style={{ transitionDelay: '160ms' }}
+            >
               Your One-Stop Scientific &amp; Laboratory Solutions Partner.
             </h2>
 
-            <p className="text-sm text-xennov-text-muted leading-relaxed max-w-2xl">
+            <p
+              className={`xn-anim-fade-up text-sm text-xennov-text-muted leading-relaxed max-w-2xl ${mounted ? 'xn-anim-visible' : ''}`}
+              style={{ transitionDelay: '220ms' }}
+            >
               Discover a comprehensive range of scientific instruments, laboratory equipment, chemicals, reagents, research consumables, and diagnostic solutions. XenNov Scientific connects research institutions, biotechnology firms, pharmaceutical manufacturers, and clinical laboratories across India with verified products and structured procurement support.
             </p>
 
-            {/* Key Capabilities box — TF style: light grey background */}
-            <div className="bg-xennov-grey border border-xennov-grey-border p-5 space-y-3">
+            {/* Key Capabilities */}
+            <div
+              className={`xn-anim-fade-up bg-xennov-grey border border-xennov-grey-border p-5 space-y-3 ${mounted ? 'xn-anim-visible' : ''}`}
+              style={{ transitionDelay: '300ms' }}
+            >
               <div className="text-[11px] font-bold uppercase tracking-widest text-xennov-blue">
                 Key Procurement Capabilities:
               </div>
               <ul className="space-y-2.5">
                 {keyObjectives.map((obj, i) => (
-                  <li key={i} className="flex items-start gap-2.5 text-xs text-xennov-text-muted">
+                  <li
+                    key={i}
+                    className={`xn-anim-fade-up flex items-start gap-2.5 text-xs text-xennov-text-muted ${mounted ? 'xn-anim-visible' : ''}`}
+                    style={{ transitionDelay: `${360 + i * 60}ms` }}
+                  >
                     <CheckCircle2 className="w-4 h-4 text-xennov-blue shrink-0 mt-0.5" />
                     <span>{obj}</span>
                   </li>
@@ -110,25 +158,31 @@ export const Hero: React.FC<HeroProps> = ({
               </ul>
             </div>
 
-            {/* CTA Buttons — TF style */}
-            <div className="flex flex-wrap items-center gap-3">
+            {/* CTA Buttons */}
+            <div
+              className={`xn-anim-fade-up flex flex-wrap items-center gap-3 ${mounted ? 'xn-anim-visible' : ''}`}
+              style={{ transitionDelay: '580ms' }}
+            >
               <button
                 onClick={onExploreProducts}
-                className="inline-flex items-center gap-2 px-6 py-3 bg-xennov-blue hover:bg-xennov-blue-dark text-white text-sm font-semibold transition-colors"
+                className="inline-flex items-center gap-2 px-6 py-3 bg-xennov-blue hover:bg-xennov-blue-dark text-white text-sm font-semibold transition-colors xn-btn-lift"
               >
                 Explore 12 Divisions
                 <ArrowRight className="w-4 h-4" />
               </button>
               <button
                 onClick={onExploreBrands}
-                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-xennov-navy border border-xennov-grey-border hover:border-xennov-blue hover:text-xennov-blue bg-white transition-colors"
+                className="inline-flex items-center gap-2 px-5 py-3 text-sm font-semibold text-xennov-navy border border-xennov-grey-border hover:border-xennov-blue hover:text-xennov-blue bg-white transition-colors xn-btn-lift"
               >
                 Brand Directory
               </button>
             </div>
 
-            {/* Trust badges — TF style: horizontal pills on white */}
-            <div className="pt-4 border-t border-xennov-grey-border flex flex-wrap gap-6 text-sm">
+            {/* Trust Badges */}
+            <div
+              className={`xn-anim-fade-up pt-4 border-t border-xennov-grey-border flex flex-wrap gap-6 text-sm ${mounted ? 'xn-anim-visible' : ''}`}
+              style={{ transitionDelay: '660ms' }}
+            >
               <div>
                 <strong className="block text-xennov-navy font-bold text-sm">12 Divisions</strong>
                 <span className="text-xs text-xennov-text-muted">Complete Taxonomy</span>
@@ -145,8 +199,11 @@ export const Hero: React.FC<HeroProps> = ({
 
           </div>
 
-          {/* Right Column: RFQ Form — TF style white card with red top border */}
-          <div className="lg:col-span-5">
+          {/* Right Column: RFQ Form — slide-in from right */}
+          <div
+            className={`lg:col-span-5 xn-anim-slide-right ${mounted ? 'xn-anim-visible' : ''}`}
+            style={{ transitionDelay: '200ms' }}
+          >
             <div className="bg-white border border-xennov-grey-border shadow-card border-t-4 border-t-xennov-blue">
 
               <div className="px-6 py-5 border-b border-xennov-grey-border">
@@ -164,7 +221,7 @@ export const Hero: React.FC<HeroProps> = ({
               <div className="px-6 py-5">
                 {submitted ? (
                   <div className="py-8 text-center space-y-3">
-                    <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto">
+                    <div className="w-12 h-12 bg-emerald-50 border border-emerald-200 text-emerald-600 flex items-center justify-center mx-auto xn-pop-in">
                       <CheckCircle2 className="w-6 h-6" />
                     </div>
                     <h4 className="text-base font-bold text-xennov-navy">Requisition Received</h4>
@@ -188,7 +245,7 @@ export const Hero: React.FC<HeroProps> = ({
                         placeholder="Dr. / Mr. / Ms. Name"
                         value={formData.fullName}
                         onChange={e => setFormData({ ...formData, fullName: e.target.value })}
-                        className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-colors ${
+                        className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-all duration-200 ${
                           errors.fullName ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
                         }`}
                       />
@@ -202,7 +259,7 @@ export const Hero: React.FC<HeroProps> = ({
                         placeholder="Institution or Company Name"
                         value={formData.organisation}
                         onChange={e => setFormData({ ...formData, organisation: e.target.value })}
-                        className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-colors ${
+                        className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-all duration-200 ${
                           errors.organisation ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
                         }`}
                       />
@@ -217,7 +274,7 @@ export const Hero: React.FC<HeroProps> = ({
                           placeholder="name@institution.com"
                           value={formData.email}
                           onChange={e => setFormData({ ...formData, email: e.target.value })}
-                          className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-colors ${
+                          className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-all duration-200 ${
                             errors.email ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
                           }`}
                         />
@@ -230,7 +287,7 @@ export const Hero: React.FC<HeroProps> = ({
                           placeholder="+91 98765 43210"
                           value={formData.phone}
                           onChange={e => setFormData({ ...formData, phone: e.target.value })}
-                          className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-colors ${
+                          className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 transition-all duration-200 ${
                             errors.phone ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
                           }`}
                         />
@@ -243,7 +300,7 @@ export const Hero: React.FC<HeroProps> = ({
                       <select
                         value={formData.category}
                         onChange={e => setFormData({ ...formData, category: e.target.value })}
-                        className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 bg-white transition-colors ${
+                        className={`w-full px-3 py-2.5 text-sm border focus:outline-none focus:ring-1 bg-white transition-all duration-200 ${
                           errors.category ? 'border-red-400 focus:ring-red-400' : 'border-xennov-grey-border focus:border-xennov-blue focus:ring-xennov-blue'
                         }`}
                       >
@@ -267,13 +324,13 @@ export const Hero: React.FC<HeroProps> = ({
                         placeholder="Mention product codes, quantities, or technical requirements..."
                         value={formData.message}
                         onChange={e => setFormData({ ...formData, message: e.target.value })}
-                        className="w-full px-3 py-2.5 text-sm border border-xennov-grey-border focus:outline-none focus:ring-1 focus:border-xennov-blue focus:ring-xennov-blue transition-colors resize-none"
+                        className="w-full px-3 py-2.5 text-sm border border-xennov-grey-border focus:outline-none focus:ring-1 focus:border-xennov-blue focus:ring-xennov-blue transition-all duration-200 resize-none"
                       />
                     </div>
 
                     <button
                       type="submit"
-                      className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-xennov-blue hover:bg-xennov-blue-dark text-white text-sm font-semibold transition-colors"
+                      className="w-full flex items-center justify-center gap-2 py-3 px-4 bg-xennov-blue hover:bg-xennov-blue-dark text-white text-sm font-semibold transition-colors xn-btn-lift"
                     >
                       Submit Quotation Request
                       <ArrowRight className="w-4 h-4" />
@@ -284,7 +341,7 @@ export const Hero: React.FC<HeroProps> = ({
                       <button
                         type="button"
                         onClick={handleWhatsApp}
-                        className="text-emerald-700 hover:text-emerald-800 font-semibold inline-flex items-center gap-1"
+                        className="text-emerald-700 hover:text-emerald-800 font-semibold inline-flex items-center gap-1 transition-colors"
                       >
                         <MessageSquare className="w-3.5 h-3.5" />
                         WhatsApp Desk
