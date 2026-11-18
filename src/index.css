@@ -1,17 +1,24 @@
-/* XenNov Scientific – Elevated Enterprise CSS */
+/* XenNov Scientific – Thermo Fisher Reference Colour System */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 :root {
-  /* Centralized Background & Surface Theme Tokens (Exact Thermo Fisher Scientific Reference Palette) */
-  --xennov-bg-main: #FFFFFF;           /* Thermo Fisher --background-primary: #ffffff */
-  --xennov-bg-subtle: #F7F7F7;         /* Thermo Fisher --background-secondary / --gray-0: #f7f7f7 */
-  --xennov-bg-subtle-alt: #F4F4F6;     /* Neutral surface */
-  --xennov-bg-border: #E5E5E5;         /* Thermo Fisher --border-subtle-01 / --gray-05: #e5e5e5 */
-  --xennov-border-subtle: #CCCCCC;     /* Thermo Fisher --border-subtle-02 / --gray-10: #cccccc */
-  --xennov-text-primary: #1B1B1D;      /* Thermo Fisher --text-primary / --gray-100: #1b1b1d */
-  --xennov-text-secondary: #54545C;    /* Thermo Fisher --text-secondary / --gray-60: #54545c */
+  /* ── Exact Thermo Fisher Scientific Design Token Palette ── */
+  --xennov-brand-red: #E71316;         /* TF --brand-primary / --red-50 */
+  --xennov-brand-red-dark: #C40003;    /* TF --brand-primary-heavy / --red-60 */
+  --xennov-brand-red-soft: #FDE4E4;    /* TF --brand-primary-subtle / --red-05 */
+
+  --xennov-bg-main: #FFFFFF;           /* TF --background-primary / --white-0 */
+  --xennov-bg-subtle: #F7F7F7;         /* TF --background-secondary / --gray-0 */
+  --xennov-bg-subtle-alt: #F4F4F6;     /* Neutral warm surface */
+  --xennov-bg-border: #E5E5E5;         /* TF --border-subtle-01 / --gray-05 */
+  --xennov-border-subtle: #CCCCCC;     /* TF --border-heavy-01 / --gray-10 */
+
+  --xennov-dark: #1B1B1D;             /* TF --gray-100 — header/footer base */
+  --xennov-darker: #111113;           /* TF deep onyx */
+  --xennov-text-primary: #1B1B1D;    /* TF --text-primary */
+  --xennov-text-secondary: #54545C;  /* TF --text-secondary */
 }
 
 @layer base {
@@ -60,19 +67,19 @@
     @apply text-xs sm:text-sm lg:text-base text-xennov-text-muted leading-relaxed font-normal;
   }
   .xn-card {
-    @apply bg-white border border-slate-200 shadow-sm hover:shadow-card-hover transition-all duration-300;
+    @apply bg-white border border-xennov-grey-border shadow-sm hover:shadow-card-hover transition-all duration-300;
   }
 
   /* Thermo Fisher-style horizontal rule */
   .xn-rule {
-    @apply w-10 sm:w-12 h-1 bg-xennov-cyan rounded-full;
+    @apply w-10 sm:w-12 h-1 bg-xennov-blue rounded-full;
   }
 }
 
-/* Custom scrollbar */
+/* Custom scrollbar — Thermo Fisher neutral */
 ::-webkit-scrollbar { width: 7px; height: 7px; }
-::-webkit-scrollbar-track { background: #F3F3F5; }
-::-webkit-scrollbar-thumb { background: #D1D1D6; border-radius: 4px; }
+::-webkit-scrollbar-track { background: #F7F7F7; }
+::-webkit-scrollbar-thumb { background: #CCCCCC; border-radius: 4px; }
 ::-webkit-scrollbar-thumb:hover { background: #E71316; }
 
 /* Smooth image rendering */
@@ -81,7 +88,7 @@ img { image-rendering: -webkit-optimize-contrast; max-width: 100%; }
 /* Utility strip (top bar) */
 .xn-topstrip { @apply bg-xennov-navy-dark text-slate-300 text-xs py-2; }
 
-/* Focus ring */
+/* Focus ring — Thermo Fisher red */
 *:focus-visible {
   outline: 2px solid #E71316;
   outline-offset: 2px;
