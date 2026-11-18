@@ -12,7 +12,7 @@ export const WhyChooseUs: React.FC = () => {
       {/* Subtle grid texture */}
       <div
         className="absolute inset-0 opacity-[0.035] pointer-events-none"
-        style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #38B6D9 1px, transparent 0)', backgroundSize: '28px 28px' }}
+        style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #E71316 1px, transparent 0)', backgroundSize: '28px 28px' }}
       />
       {/* Blue accent glow top-right */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-xennov-blue/10 blur-3xl pointer-events-none" />

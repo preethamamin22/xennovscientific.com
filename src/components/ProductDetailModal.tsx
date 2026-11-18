@@ -89,7 +89,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                 <div 
                   className="absolute inset-0 opacity-15 pointer-events-none"
                   style={{
-                    backgroundImage: 'linear-gradient(to right, #1677B8 1px, transparent 1px), linear-gradient(to bottom, #1677B8 1px, transparent 1px)',
+                    backgroundImage: 'linear-gradient(to right, #E71316 1px, transparent 1px), linear-gradient(to bottom, #E71316 1px, transparent 1px)',
                     backgroundSize: '16px 16px'
                   }}
                 />
@@ -120,7 +120,7 @@ export const ProductDetailModal: React.FC<ProductDetailModalProps> = ({
                   <span className="text-[10px] font-semibold text-slate-700 bg-xennov-grey border border-xennov-grey-border px-1.5 py-0.5">
                     ✓ Original Manufacturer
                   </span>
-                  <span className="text-[10px] font-semibold text-blue-800 bg-blue-50 border border-blue-200 px-1.5 py-0.5">
+                  <span className="text-[10px] font-semibold text-red-800 bg-red-50 border border-red-200 px-1.5 py-0.5">
                     ✓ ISO 9001 Sourcing
                   </span>
                 </div>

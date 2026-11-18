@@ -31,7 +31,7 @@ export const ProductCategoryModal: React.FC<ProductCategoryModalProps> = ({
           <div 
             className="absolute inset-0 opacity-[0.05] pointer-events-none"
             style={{
-              backgroundImage: 'radial-gradient(circle at 1px 1px, #38B6D9 1px, transparent 0)',
+              backgroundImage: 'radial-gradient(circle at 1px 1px, #E71316 1px, transparent 0)',
               backgroundSize: '24px 24px'
             }}
           />

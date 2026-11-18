@@ -7,7 +7,7 @@
   /* Centralized Background & Surface Theme Tokens (Exact Thermo Fisher Scientific Reference Palette) */
   --xennov-bg-main: #FFFFFF;           /* Thermo Fisher --background-primary: #ffffff */
   --xennov-bg-subtle: #F7F7F7;         /* Thermo Fisher --background-secondary / --gray-0: #f7f7f7 */
-  --xennov-bg-subtle-alt: #F1F9FF;     /* Thermo Fisher --blue-0: #f1f9ff */
+  --xennov-bg-subtle-alt: #F4F4F6;     /* Neutral surface */
   --xennov-bg-border: #E5E5E5;         /* Thermo Fisher --border-subtle-01 / --gray-05: #e5e5e5 */
   --xennov-border-subtle: #CCCCCC;     /* Thermo Fisher --border-subtle-02 / --gray-10: #cccccc */
   --xennov-text-primary: #1B1B1D;      /* Thermo Fisher --text-primary / --gray-100: #1b1b1d */
@@ -71,9 +71,9 @@
 
 /* Custom scrollbar */
 ::-webkit-scrollbar { width: 7px; height: 7px; }
-::-webkit-scrollbar-track { background: #F3F6F9; }
-::-webkit-scrollbar-thumb { background: #A8BFCC; border-radius: 4px; }
-::-webkit-scrollbar-thumb:hover { background: #1677B8; }
+::-webkit-scrollbar-track { background: #F3F3F5; }
+::-webkit-scrollbar-thumb { background: #D1D1D6; border-radius: 4px; }
+::-webkit-scrollbar-thumb:hover { background: #E71316; }
 
 /* Smooth image rendering */
 img { image-rendering: -webkit-optimize-contrast; max-width: 100%; }
@@ -83,7 +83,7 @@ img { image-rendering: -webkit-optimize-contrast; max-width: 100%; }
 
 /* Focus ring */
 *:focus-visible {
-  outline: 2px solid #38B6D9;
+  outline: 2px solid #E71316;
   outline-offset: 2px;
   border-radius: 2px;
 }

@@ -72,7 +72,7 @@ export const Hero: React.FC<HeroProps> = ({
       <div 
         className="absolute inset-0 opacity-[0.035] pointer-events-none"
         style={{
-          backgroundImage: 'radial-gradient(circle at 1px 1px, #38B6D9 1px, transparent 0)',
+          backgroundImage: 'radial-gradient(circle at 1px 1px, #E71316 1px, transparent 0)',
           backgroundSize: '32px 32px'
         }}
       />

@@ -23,9 +23,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenLegal }) => {
             <div className="flex items-center gap-3">
               <div className="w-8 h-8 sm:w-9 sm:h-9 bg-xennov-navy border border-white/20 flex items-center justify-center">
                 <svg viewBox="0 0 36 36" className="w-4 h-4 sm:w-5 sm:h-5" fill="none">
-                  <path d="M13 5h10M15 5v9L9 25a4 4 0 003.5 6h11A4 4 0 0027 25L21 14V5" stroke="#38B6D9" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+                  <path d="M13 5h10M15 5v9L9 25a4 4 0 003.5 6h11A4 4 0 0027 25L21 14V5" stroke="#E71316" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   <circle cx="18" cy="22" r="2" fill="#FFFFFF" opacity="0.9"/>
-                  <circle cx="14" cy="27" r="1.2" fill="#38B6D9" opacity="0.7"/>
+                  <circle cx="14" cy="27" r="1.2" fill="#E71316" opacity="0.7"/>
                 </svg>
               </div>
               <div>
